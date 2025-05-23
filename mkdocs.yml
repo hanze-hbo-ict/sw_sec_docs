@@ -1,7 +1,7 @@
 # Project information
 site_name: 'Software Security'
 site_description: 'Repo voor SE/NSE 1.4 Software Security: vakinformatie en opgaven per week, voorbeeldcode'
-site_url: 'https://blackboard.hanze.nl/webapps/blackboard/content/listContentEditable.jsp?content_id=_5908320_1&course_id=_356906_1'
+site_url: 'https://hanze-hbo-ict.github.io/sw_sec_docs'
 use_directory_urls: false
 
 theme:
