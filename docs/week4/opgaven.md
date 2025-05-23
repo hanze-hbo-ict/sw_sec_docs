@@ -7,7 +7,7 @@ We gaan deze week bezig met het bepalen van risico’s van een geheel systeem in
 De Hanze wil de fysieke schoolpassen vervangen door een digitale studentenpas in de vorm van een app. Deze _Smart Campus App_ biedt studenten onder andere toegang tot:
 
 1. Gebouwen: via deuren die met [NFC](https://en.wikipedia.org/wiki/Near-field_communication) te openen zijn.
-1. Koffieautomaten en kantine: hiervoor zit er een betaalsysteem op basis van een saldo in de app.
+1. Koffieautomaten en kantine: hiervoor zit er een betaalsysteem in de app, op basis van een saldo dat in Osiris wordt bijgehouden.
 1. Osiris: cijfers en andere persoonlijke gegevens inzien.
 1. Attendance: aanwezigheidsregistratie via QR-code bij lessen, aanwezigheidshistorie inzien.
 
