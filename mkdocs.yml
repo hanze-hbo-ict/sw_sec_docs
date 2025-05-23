@@ -16,6 +16,9 @@ theme:
 extra_css:
   - css/extra.css
 
+exclude_docs: |
+  /blackboard.md
+
 markdown_extensions:
   - markdown.extensions.codehilite:
       guess_lang: False
