@@ -1,0 +1,23 @@
+Dit zijn de benodigde commando's om onder Windows (WSL) Hydra en Radamsa te kunnen demonstreren.
+
+# Demo Hydra
+
+* Start Terminal en open 2 Ubuntu-windows
+* Window 1:
+  ``cd /mnt/c/Users/rote/Programmeren/sw_sec_docs/src/pract-wk1/``
+  ``source wk1-venv/bin/activate``
+  ``python app.py``
+* Laat even zien dat de app draait in de browser
+* Window 2:
+  ``cd hydra``
+  ``hydra -v -l t.e.roos@pl.hanze.nl -x 4:4:1 127.0.0.1 -s 5000 http-post-form "/login:email=^USER^&password=^PASS^:Inlog mislukt."``
+
+# Demo Radamsa
+
+* Zorg dat de voorbeeldmap leeg is! \\wsl.localhost\Ubuntu\home\erikroos\radamsa\examples\fuzz-cases
+* Eerst een paar keer ``echo "Dit is een test" | radamsa`` laten zien
+* ``cd radamsa``
+  ``cd examples``
+  ``radamsa -n 10 -o 'fuzz-cases/test-%n.%s' test.txt``
+  ``radamsa -n 10 -o 'fuzz-cases/foto-%n.%s' mijnfoto_klein.png``
+* Inhoud van de map laten zien

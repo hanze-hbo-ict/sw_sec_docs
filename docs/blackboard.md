@@ -103,6 +103,7 @@ Lever hier de herkansing in van de opgaven van week 1, in doc- of pdf-formaat. G
 In week 2 gaan we ons bezighouden met het aanvallen en verdedigen van webapplicaties. We gaan eerst een aantal bedreigingen uit de OWASP Top 10 bij langs (XSS, CSRF) en kijken daarna hoe we deze aanvallen kunnen voorkomen.
 In het practicum gaan we een aantal aanvallen uitvoeren op een speciale website die allerlei vulnerabilities bevat. Leer hoe je geld toe kunt krijgen bij een bestelling in een webshop!
 
+### Voorbereiding
 Lezen:
 * Hoffman hoofdstuk 3, heel deel II en hoofdstukken 23-26
 
@@ -156,9 +157,8 @@ In week 4 gaan we ons bezighouden met threat modelling. Hierbij probeer je op ba
 ### Voorbereiding
 Deze cheat-sheet van OWASP geeft een compacte inleiding op threat modelling (en STRIDE): https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html
 
-Daarnaast kun je alvast de screencast over threat-modellen met STRIDE bekijken.
-
-Lezen:  Shostack hoofdstukken 1, 2, 3, 7, 8
+Lezen:
+* Shostack hoofdstukken 1, 2, 3, 7, 8
 
 ### Slides week 4
 
@@ -197,8 +197,6 @@ In week 5 gaan we ons bezighouden met een herhaling van de AVG en met privacy th
 
 ### Voorbereiding
 Je zou vooraf alvast dit filmpje kunnen bekijken waarin de makers zelf de LINDDUN-methode toelichten (12 minuten): https://www.youtube.com/watch?v=hWpZ-CozRBs
-
-Bekijk ook alvast de screencast over privacy-threat-modelling met LINDDUN.
 
 Lezen:
 * Shostack hoofdstukken 6 en 8 (pp. 160-164)
