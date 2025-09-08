@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
     
     
       
@@ -826,7 +826,7 @@
 <h1 id="opgaven-week-2-hacking-the-juice-shop">Opgaven week 2: hacking the Juice Shop<a class="headerlink" href="#opgaven-week-2-hacking-the-juice-shop" title="Permanent link">&para;</a></h1>
 <p>In dit practicum gaan we aan de slag met het opsporen van beveiligingsproblemen binnen een webshop-applicatie. Voor deze opdracht werken we met Docker en OWASP ZAP (Open Web Application Security Project – Zed Attack Proxy).</p>
 <h2 id="installatie-van-owasp-zap">Installatie van OWASP ZAP<a class="headerlink" href="#installatie-van-owasp-zap" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.zaproxy.org/download/">Download</a> de software. Voltooi de installatie en start de software op. Krijg je tijdens de installatie een foutmelding met betrekking tot de Java-JDK of -JRE? Het kan helpen om <a href="https://adoptium.net/">de JDK van Adoptium</a> te installeren.</p>
+<p><a href="https://www.zaproxy.org/download/">Download</a> de software. Voltooi de installatie en start de software op. Krijg je tijdens de installatie een foutmelding met betrekking tot de Java-JDK of -JRE? Het kan helpen om <a href="https://adoptium.net/">de JDK van Adoptium</a> te installeren. <strong>Denk erom dat je bij de stap 'Custom Setup' de optie 'Set or override JAVA_HOME variable' aanzet!</strong></p>
 <p>Om ZAP te leren kennen, begin je met een "Automated scan". Als OWASP ZAP is opgestart kun je hier direct voor kiezen. Na deze keuze kan er een URL ingevoerd worden. Dit is de URL naar een webapplicatie, inclusief de poort. Kies hierna "Aanval". OWASP ZAP zal de gekozen website inladen en past o.a. een fuzzer toe op plekken waar data ingevoerd kan worden. Alle gevonden kwetsbaarheden en uitgevoerde requests worden in de onderste balk gelogd. <strong>Gebruik nu nog niet de Juiceshop</strong>, maar kies bijvoorbeeld je eigen webapp van het vak Webtech. Je zult verbaasd staan hoeveel kwetsbaarheden ZAP zal vinden!</p>
 <p>Als je kiest voor "Manual Explore", kun je met een browser naar keuze door een opgegeven website navigeren, terwijl alle requests worden gelogd en eventueel (met aangebrachte wijzigingen) later opnieuw verzonden kunnen worden.</p>
 <p>Aanvullende informatie is <a href="https://www.zaproxy.org/getting-started/">hier</a> te vinden.</p>
