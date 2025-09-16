@@ -97,9 +97,9 @@ Voor deze weekopgave lever je de volgende onderdelen in:
 
 Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg ervoor dat je Docker geïnstalleerd hebt en voer de volgende commando’s uit: 
 
-``docker pull jjmellens/timingattack:latest``
+``docker pull el3an0r/hanze-timing-attack``
 
-``docker run -d -p 3840:8080 --name timingattack el3an0r/hanze-timing-attack``
+``docker run -d -p 8080:3840 --name timingattack el3an0r/hanze-timing-attack``
 
 Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met ``docker ps`` en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met ``localhost:8080``.
 De server op de docker-container bevat overigens alleen de user _000000_ met wachtwoord _hunter2_. 
