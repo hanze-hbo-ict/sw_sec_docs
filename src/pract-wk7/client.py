@@ -18,18 +18,14 @@ async def client_connect(username, password, variance=0.0):
         reply -- string of server's response to login attempt
     """
 
-    #server_address = "ws://20.224.29.49:8080"
-    server_address = "ws://127.0.0.1:3840"
+    server_address = "ws://20.224.193.77:8080"   # Hanze server
+    #server_address = "ws://127.0.0.1:8080"      # local (Docker) server
     
     while True:
         try:
             async with websockets.connect(server_address) as websocket:
 
-                # The (local) Docker server does not accept variance.
-                # When switching to the Hanze server, you can add the variance parameter to the request.
-                await websocket.send(dumps([username, password]))
-                #await websocket.send(dumps([username, password, variance]))
-
+                await websocket.send(dumps([username, password, variance]))
                 reply = await websocket.recv()
 
             return loads(reply)

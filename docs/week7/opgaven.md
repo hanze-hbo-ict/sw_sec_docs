@@ -32,7 +32,7 @@ Met deze kennis zouden we kunnen proberen om het wachtwoord te kraken, en dat is
 
 ### Opdracht 
 
-Er is een simpele server opgezet worden waar je kunt inloggen met je studentencode en een (voor jullie) onbekend wachtwoord. Deze is via de Eduroam-wifi op ZP11 toegankelijk via IP 20.224.29.49 en poort 8080.
+Er is een simpele server opgezet worden waar je kunt inloggen met je studentencode en een (voor jullie) onbekend wachtwoord. Deze is via de Eduroam-wifi op ZP11 toegankelijk via IP 20.224.193.77 en poort 8080.
 Voor testdoeleinden is het mogelijk om eerst [met een lokale server te werken](#lokale-server).
 
 Je krijgt cadeau dat het wachtwoord alléén uit kleine letters en cijfers bestaat.
@@ -95,15 +95,15 @@ Voor deze weekopgave lever je de volgende onderdelen in:
 
 #### Lokale server 
 
-Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg dat je Docker geïnstalleerd hebt (en de map met docker.exe hebt toegevoegd aan je PATH), en voer de volgende commando’s uit: 
+Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg ervoor dat je Docker geïnstalleerd hebt en voer de volgende commando’s uit: 
 
 ``docker pull jjmellens/timingattack:latest``
 
-``docker run -d -p 3840:3840 --name timingattack jjmellens/timingattack``
+``docker run -d -p 3840:8080 --name timingattack el3an0r/hanze-timing-attack``
 
-Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met ``docker ps`` en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met ``localhost:3840``.
+Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met ``docker ps`` en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met ``localhost:8080``.
 De server op de docker-container bevat overigens alleen de user _000000_ met wachtwoord _hunter2_. 
 
 NB: de Docker-server draait lokaal op je eigen machine en heeft dus geen last van netwerk-interferentie.
-Dat betekent dat een aanval die alleen is getest op de Docker server hoogstwaarschijnlijk niet werkt op de echte server.
+Dat betekent dat een aanval die alleen is getest op de Docker-server hoogstwaarschijnlijk niet werkt op de echte server.
 Houd hier dus rekening mee en zorg dat je je oplossing ook op locatie test. Tip: host de Docker-server bij voorkeur op een ander apparaat dan de machine vanwaar je de aanval uitvoert. 
