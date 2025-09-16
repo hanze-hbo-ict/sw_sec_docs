@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -836,7 +836,7 @@ Zodra die een verkeerd karakter tegenkomt eindigt de functie en wordt de toegang
 <p>Dit betekent dus dat hoe meer karakters (op een rij, vanaf het eerste karakter) juist zijn, hoe vaker de loop wordt herhaald, en dus hoe langer het duurt voor de functie een antwoord teruggeeft!  </p>
 <p>Met deze kennis zouden we kunnen proberen om het wachtwoord te kraken, en dat is ook precies wat we in deze opdracht gaan doen.  </p>
 <h3 id="opdracht">Opdracht<a class="headerlink" href="#opdracht" title="Permanent link">&para;</a></h3>
-<p>Er is een simpele server opgezet worden waar je kunt inloggen met je studentencode en een (voor jullie) onbekend wachtwoord. Deze is via de Eduroam-wifi op ZP11 toegankelijk via IP 20.224.29.49 en poort 8080.
+<p>Er is een simpele server opgezet worden waar je kunt inloggen met je studentencode en een (voor jullie) onbekend wachtwoord. Deze is via de Eduroam-wifi op ZP11 toegankelijk via IP 20.224.193.77 en poort 8080.
 Voor testdoeleinden is het mogelijk om eerst <a href="#lokale-server">met een lokale server te werken</a>.</p>
 <p>Je krijgt cadeau dat het wachtwoord alléén uit kleine letters en cijfers bestaat.
 Deze server werkt aan de achterkant praktisch hetzelfde als de bovenstaande functie, en je kunt hem dus ook op dezelfde manier uitbuiten om het wachtwoord te kraken.
@@ -919,13 +919,13 @@ NB: het wachtwoord bestaat uit alleen kleine letters en cijfers. Mocht je je aan
 <li>Een .pdf van het verslag.</li>
 </ul>
 <h4 id="lokale-server">Lokale server<a class="headerlink" href="#lokale-server" title="Permanent link">&para;</a></h4>
-<p>Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg dat je Docker geïnstalleerd hebt (en de map met docker.exe hebt toegevoegd aan je PATH), en voer de volgende commando’s uit: </p>
+<p>Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg ervoor dat je Docker geïnstalleerd hebt en voer de volgende commando’s uit: </p>
 <p><code>docker pull jjmellens/timingattack:latest</code></p>
-<p><code>docker run -d -p 3840:3840 --name timingattack jjmellens/timingattack</code></p>
-<p>Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met <code>docker ps</code> en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met <code>localhost:3840</code>.
+<p><code>docker run -d -p 3840:8080 --name timingattack el3an0r/hanze-timing-attack</code></p>
+<p>Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met <code>docker ps</code> en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met <code>localhost:8080</code>.
 De server op de docker-container bevat overigens alleen de user <em>000000</em> met wachtwoord <em>hunter2</em>. </p>
 <p>NB: de Docker-server draait lokaal op je eigen machine en heeft dus geen last van netwerk-interferentie.
-Dat betekent dat een aanval die alleen is getest op de Docker server hoogstwaarschijnlijk niet werkt op de echte server.
+Dat betekent dat een aanval die alleen is getest op de Docker-server hoogstwaarschijnlijk niet werkt op de echte server.
 Houd hier dus rekening mee en zorg dat je je oplossing ook op locatie test. Tip: host de Docker-server bij voorkeur op een ander apparaat dan de machine vanwaar je de aanval uitvoert. </p>
 
 
@@ -978,7 +978,7 @@ Houd hier dus rekening mee en zorg dat je je oplossing ook op locatie test. Tip:
       <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../js/imgs.js"></script>
       
