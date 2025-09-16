@@ -920,8 +920,8 @@ NB: het wachtwoord bestaat uit alleen kleine letters en cijfers. Mocht je je aan
 </ul>
 <h4 id="lokale-server">Lokale server<a class="headerlink" href="#lokale-server" title="Permanent link">&para;</a></h4>
 <p>Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg ervoor dat je Docker geïnstalleerd hebt en voer de volgende commando’s uit: </p>
-<p><code>docker pull jjmellens/timingattack:latest</code></p>
-<p><code>docker run -d -p 3840:8080 --name timingattack el3an0r/hanze-timing-attack</code></p>
+<p><code>docker pull el3an0r/hanze-timing-attack</code></p>
+<p><code>docker run -d -p 8080:3840 --name timingattack el3an0r/hanze-timing-attack</code></p>
 <p>Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met <code>docker ps</code> en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met <code>localhost:8080</code>.
 De server op de docker-container bevat overigens alleen de user <em>000000</em> met wachtwoord <em>hunter2</em>. </p>
 <p>NB: de Docker-server draait lokaal op je eigen machine en heeft dus geen last van netwerk-interferentie.
