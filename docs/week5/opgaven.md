@@ -85,4 +85,4 @@ We gebruiken hiervoor dezelfde casus als vorige week. De DFD kun je dus hergebru
 
 2.5.\ Bedenk voor de top 3 van kwetsbare interfaces zo veel mogelijk maatregelen om de gevonden risico’s te verminderen.
 
-*Tip: je kunt 2 t/m 5 grotendeels in één keer maken door gebruik te maken een tabel met kolommen voor de interfaces en data stores, de letters L I Nr De Di U Nc, de scenario's (incl. type data en stakeholders), de prioriteiten en de tegenmaatregelen, en deze te sorteren op prioriteit. Zie bijvoorbeeld de Excel-sheet die op Blackboard staat. Denk er wel om dat je de **onderbouwing** van je prioritering erbij vermeldt!*
+*Tip: je kunt 2 t/m 5 grotendeels in één keer maken door gebruik te maken een tabel met kolommen voor de interfaces en data stores, de letters L I Nr De Di U Nc, de scenario's (incl. type data en stakeholders), de prioriteiten en de tegenmaatregelen, en deze te sorteren op prioriteit. Zie bijvoorbeeld de Excel-sheet die op BrightSpace staat. Denk er wel om dat je de **onderbouwing** van je prioritering erbij vermeldt!*

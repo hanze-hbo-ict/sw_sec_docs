@@ -37,7 +37,7 @@ De app communiceert dus met verschillende (back-end) systemen en maakt daarbij g
 * <b>T</b>ransfer: de verantwoordelijkheid overdragen aan een andere partij
 * <b>A</b>ccept: het risico voor lief nemen en niets doen
 
-*Tip: je kunt 2 t/m 5 grotendeels in één keer maken door gebruik te maken een tabel met kolommen voor de interfaces, de STRIDE-letters, de scenario's, de prioriteiten en de tegenmaatregelen, en deze te sorteren op prioriteit. Zie bijvoorbeeld de Excel-sheet die op Blackboard staat. Denk er wel om dat je de **onderbouwing** van je prioritering erbij vermeldt!*
+*Tip: je kunt 2 t/m 5 grotendeels in één keer maken door gebruik te maken een tabel met kolommen voor de interfaces, de STRIDE-letters, de scenario's, de prioriteiten en de tegenmaatregelen, en deze te sorteren op prioriteit. Zie bijvoorbeeld de Excel-sheet die op BrightSpace staat. Denk er wel om dat je de **onderbouwing** van je prioritering erbij vermeldt!*
 
 ## Tools voor het tekenen van DFD's
 

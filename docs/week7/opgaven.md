@@ -89,7 +89,7 @@ Als je het wachtwoord niet hebt kunnen vinden resulteert dat niet per se een onv
 Voor deze weekopgave lever je de volgende onderdelen in: 
 
 * Jullie versie van het client.py bestand met de code die je hebt gebruikt om de server te kraken, voorzien van eigen commentaar.
-* Een .pdf met dezelfde code + commentaar. Dit voor het beoordelen middels Blackboard.
+* Een .pdf met dezelfde code + commentaar. Dit voor het beoordelen op BrightSpace.
 * Een .pdf van de eerste volledige versie van je pseudo-code (als je je pseudo-code schriftelijk hebt gemaakt is een .pdf met/van een foto ook goed).
 * Een .pdf van het verslag.
 
