@@ -4,7 +4,9 @@ We gaan ons deze week verdiepen in de wondere wereld van de cryptografie, om de 
 
 ## Deel 1: cryptografie (50%)
 
-[Download](https://www.cryptool.org/en/ct2/downloads/) en installeer CrypTool 2 (op Windows). [In deze video](https://www.youtube.com/watch?v=nTEj-lZ2V38) kun je zien hoe je het onder Linux kunt installeren.
+* Windows: [download](https://www.cryptool.org/en/ct2/downloads/) en installeer CrypTool 2.
+* Mac: je zou bijvoorbeeld [Wine](https://www.winehq.org/) kunnen gebruiken om de Windows-executable te draaien.
+* Linux: [in deze video](https://www.youtube.com/watch?v=nTEj-lZ2V38) kun je zien hoe je het onder Linux kunt installeren.
 
 Kies _Main functions_ > _Create a new workspace with the graphical editor_ om op een grafische manier inputs, encryptie-algoritmes en outputs aan te maken en met elkaar te verbinden.
 
