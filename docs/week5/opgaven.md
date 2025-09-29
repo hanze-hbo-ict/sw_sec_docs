@@ -42,7 +42,7 @@ Maak voor deze opdracht een nieuwe workspace aan.
 
 1.2.a.\ Plaats een AES Visualization in de workspace. Sluit hier twee Text Inputs op aan, eentje voor de key en eentje voor de te versleutelen tekst. Om het helemaal goed te laten werken, zet je tussen elke Text Input en de AES een String Decode, die tekst omzet in bytes. Denk er ook om dat de lengte van de key overeenkomt met de _keysize_ van AES (bijv. 128 bits = 16 bytes = key van 16 letters). Sluit tot slot een Text Output aan op de AES. Druk op Play en klik met Next door de visualisatie heen die in de AES-component wordt getoond. Als je het principe op een gegeven moment snapt, kun je met _Skip Round_ de zaken wat versnellen.
 
-1.2.b.\ Vervang de AES Visualization door een gewone AES-component, met Action: Encrypt. Verifieer dat de output (de geëncodeerde versie van de invoertekst) niet verandert.
+1.2.b.\ Vervang de AES Visualization door een gewone AES-component, met Action: Encrypt. Verifieer dat (het eerste gedeelte van) de output niet verandert. De Visualization encodeert alleen het eerste stuk van de input, ter grootte van de keysize. De normale AES encodeert de volledige aangeleverde tekst (door de key zo vaak als nodig te herhalen).
 
 1.2.c.\ Maak een tweede AES-component aan, met Action: Decrypt. Sluit deze aan op de Text Output met de geëncrypte tekst, en op dezelfde sleutel die je ook voor het encrypten gebruikt hebt (dit is waarom het symmetrische encryptie heet). De uitvoer van de tweede AES leid je via een String Encode naar een Text Output, waar je als het goed is na een druk op Play de oorspronkelijke tekst weer terugvindt.
 
