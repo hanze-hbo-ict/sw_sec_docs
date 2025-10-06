@@ -39,7 +39,7 @@ Maak van bovenstaande zes punten een lopend verhaal, en voeg een korte inleiding
 
 ## Hoe moet je het geheel inleveren?
 
-Het threat modelling-rapport en het advies aan Initech (deel 1 en 2) mogen worden samengevoegd in één document en als doc(x) of pdf worden ingeleverd via het Inleverpunt. Bij opdracht 1: vermeld duidelijk met wie je samen de DFD hebt gemaakt (mag evt. met je hele IOT-projectgroep) en met wie je eventueel als duo hebt samengewerkt. **Bij opdracht 2: deze is individueel!**
+Het threat modelling-rapport en het advies aan Initech (deel 1 en 2) mogen worden samengevoegd in één document en als doc(x) of pdf worden ingeleverd via het Inleverpunt. Bij deel 1: vermeld duidelijk met wie je samen de DFD hebt gemaakt (mag evt. met je hele projectgroep) en met wie je eventueel als duo hebt samengewerkt. **Bij deel 2: dit is individueel!**
 
 -----
 <sup>*</sup> _Lees hier, afhankelijk van je gekozen richting, software engineer danwel network & security engineer._
