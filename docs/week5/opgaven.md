@@ -81,7 +81,7 @@ We gebruiken hiervoor dezelfde casus als vorige week. De DFD kun je dus hergebru
 2.3.\ Geef per interface en data store minstens één concreet aanvalsscenario waarin één of meer van de door jou gekozen LINDDUN-letters terugkomen. Hierbij komt ook kijken:
 
 * Wat voor privacygevoelige informatie er over de interface gaat of in de data store staat.
-* Wat voor probleem het is als deze informatie uitlekt, voor de verschillende stakeholders (denk aan studenten, de bouwer van de app, de leveranciers van andere systemen zoals Osiris, de Hanze).
+* Wat voor probleem het is als deze informatie uitlekt, voor de verschillende stakeholders (denk de gebruikers, de bouwer van de app, de gemeente, de betaalprovider etc.).
 
 2.4.\ Maak nu een lijst van de interfaces en data stores, gesorteerd op prioriteit, dus de in jouw optiek meest kwetsbare bovenaan. Onderbouw je keuze!
 

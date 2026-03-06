@@ -4,14 +4,24 @@ We gaan deze week bezig met het bepalen van risico’s van een geheel systeem in
 
 ## Casus
 
-De Hanze wil de fysieke schoolpassen vervangen door een digitale studentenpas in de vorm van een app. Deze _Smart Campus App_ biedt studenten onder andere toegang tot:
+Een Gronings **deelmobiliteitsbedrijf** lanceert de app *GroenRijden*, waarmee gebruikers in de stad elektrische deelfietsen en -steps kunnen huren. De app biedt de volgende functionaliteit:
 
-1. Gebouwen: via deuren die met [NFC](https://en.wikipedia.org/wiki/Near-field_communication) te openen zijn.
-1. Koffieautomaten en kantine: hiervoor zit er een betaalsysteem in de app, op basis van een saldo dat in Osiris wordt bijgehouden.
-1. Osiris: cijfers en andere persoonlijke gegevens inzien.
-1. Attendance: aanwezigheidsregistratie via QR-code bij lessen, aanwezigheidshistorie inzien.
+1. **Voertuig zoeken en ontgrendelen**: de app toont beschikbare voertuigen op een kaart (op basis van de GPS-locatie van de gebruiker en van de voertuigen). Een voertuig wordt ontgrendeld door met de app een Bluetooth-verbinding te maken met het slot.
+2. **Rit registreren**: tijdens een rit wordt de route van het voertuig continu bijgehouden via GPS. Aan het einde van de rit vergrendelt de gebruiker het voertuig weer via de app. De ritgegevens (start- en eindlocatie, route, duur, afstand) worden opgeslagen.
+3. **Betalen**: de ritprijs wordt berekend op basis van duur en afstand. De gebruiker betaalt via een gekoppelde creditcard of iDEAL. De betalingen worden afgehandeld door een externe betaalprovider (PSP).
+4. **Beloningssysteem**: op basis van rijgedrag (snelheid, parkeren in aangewezen zones) krijgen gebruikers punten die korting opleveren. De app houdt een persoonlijk profiel bij met ritstatistieken en een gedragsscore.
+5. **Gemeentekoppeling**: de app deelt geanonimiseerde data over parkeergedrag en ritpatronen met de gemeente Groningen, die dit gebruikt voor handhaving van parkeerzones en voor verkeersbeleid.
 
-De app communiceert dus met verschillende (back-end) systemen en maakt daarbij gebruik van wifi (eduroam). De authenticatie en autorisatie worden verzorgd door Osiris. Dat systeem is leidend en bevat, naast de bekende database met cijfers, een aparte database met alle studenten en hun rechten, bijvoorbeeld welke deuren ze mogen openen. Ook het kantine-saldo staat in deze database.
+Het systeem bestaat uit de volgende onderdelen:
+
+- De **mobiele app** (iOS/Android), geïnstalleerd op het toestel van de gebruiker.
+- Een **centrale back-end server** met een API, die de app-logica en gebruikersdata beheert.
+- Een **gebruikersdatabase** met accountgegevens, rithistorie, betaalgegevens en gedragsscores.
+- **IoT-modules in de voertuigen**: elk voertuig heeft een Bluetooth-slot en een GPS/4G-module die locatiegegevens naar de back-end stuurt.
+- De **externe betaalprovider** (PSP), die creditcard- en iDEAL-transacties verwerkt.
+- Een **API-koppeling met de gemeente** voor het delen van geanonimiseerde gebruiksdata.
+
+Gebruikers registreren zich met e-mailadres, telefoonnummer en betaalgegevens. De authenticatie verloopt via e-mail/wachtwoord met optionele tweefactorauthenticatie (2FA) via SMS.
 
 ## Opdrachten
 
