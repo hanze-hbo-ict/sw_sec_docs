@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1132,7 +1132,7 @@ sudo apt install libssl-dev libssh-dev libidn11-dev libpcre3-dev libgtk2.0-dev l
 <p>1. Je gaat een (misschien wel je eigen) Webtech- of IOT-applicatie<sup>*</sup> brute-forcen! Maak een gebruiker aan met een simpel wachtwoord, bijvoorbeeld bestaande uit 3 cijfers, en kijk hoelang Hydra erover doet om het te kraken. Maak nu het wachtwoord stapsgewijs complexer door meer cijfers en eventueel letters en leestekens (pas dan wel je -x-parameter aan) toe te voegen, en noteer steeds hoelang Hydra er ongeveer over doet. Als Hydra er te lang over gaat doen, kun je stoppen. Welke wachtwoord-complexiteit vind jij veilig genoeg? Schaalt dit naar een echte productie-applicatie of gelden er dan toch nog strengere eisen, en waarom?</p>
 <p>2. Een andere, vaak succesvollere, aanpak die hackers gebruiken, is een <em>dictionary attack</em>. Hierbij wordt een lijst met (gestolen) wachtwoorden gebruikt. Een bekende lijst is RockYou.txt, waarvan we <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1/rockyou">hier</a> het eerste gedeelte voor je klaar hebben gezet. Pas je Hydra-aanroep aan door het -x-gedeelte weg te halen en te vervangen door -P &lt;pad naar rockyou_first10000.txt&gt;. Maak weer een gebruiker aan, ditmaal met een wachtwoord uit de lijst. Kies eerst een willekeurig wachtwoord uit het begin, dan uit het midden en tot slot uit het einde van de lijst. Hoe lang duurt het kraken in deze drie gevallen?</p>
 <p>3. Benoem drie mogelijkheden om dit soort brute-force-aanvallen tegen te gaan.</p>
-<p>Lever een kort verslagje in over deze "penetration test" (pentest), inclusief screenshots van je Hydra-aanroeptijden, metingen, conclusies en drie tegenmaatregelen. (50%)</p>
+<p>Lever een kort verslagje in over deze "penetration test" (pentest), inclusief screenshots van je Hydra-aanroeptijden, metingen, conclusies en drie tegenmaatregelen.</p>
 <p><sup>*</sup> Geen eigen webapp (meer) paraat? <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1">Hier</a> kun je er eentje vinden die je ook mag gebruiken.
 In de README staat ook <a href="https://hub.docker.com/r/tomerikroos/webapp-hydra">een link naar een image op DockerHub</a>, nog gemakkelijker.
 Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.</p>
@@ -1157,7 +1157,7 @@ Ga naar de map fuzz-cases en bekijk hier de gefuzzde bestanden.</p>
 <p>Leer radamsa verder kennen. Ga er mee aan de slag en kijk wat het doet. Raadpleeg hiervoor ook aanvullende informatie op internet en ga in overleg met klasgenoten.</p>
 <h3 id="de-opdracht_1">De opdracht<a class="headerlink" href="#de-opdracht_1" title="Permanent link">&para;</a></h3>
 <p>Radamsa kun je toepassen op tekstbestanden, afbeeldingen, codefragmenten etc. Kies een aantal bronnen om de fuzzer op toe te passen (minimaal 3, bijvoorbeeld een tekst-, een audio- en een codebestand). Pas radamsa toe en analyseer het resultaat. Wat gebeurt er als je gefuzzde bestanden probeert uit te voeren of te laten openen door de applicatie waarmee je ze normaal opent? Kan dit kwaad en/of kan hier misbruik van gemaakt worden?</p>
-<p>Lever een kort verslagje in over deze "fuzz test". Welke bronnen heb je gekozen en waarom? Beschrijf en laat d.m.v. screenshots zien wat je opvalt: wat voor data wordt er gegenereerd en wat is het effect van deze data? (50%)</p>
+<p>Lever een kort verslagje in over deze "fuzz test". Welke bronnen heb je gekozen en waarom? Beschrijf en laat d.m.v. screenshots zien wat je opvalt: wat voor data wordt er gegenereerd en wat is het effect van deze data?</p>
 <p>De beide verslagjes (Hydra en Radamsa) mogen worden samengevoegd in één document en als doc(x) of pdf worden ingeleverd via het Inleverpunt.</p>
 
 
