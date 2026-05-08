@@ -2,20 +2,20 @@
 
 Deze week gaan we bezig met een technische opgave én doen we zelfstandig onderzoek naar een belangrijke vraag voor de praktijk: wat is de toegevoegde waarde van security tooling?
 
-## Deel 1: problemen oplossen in een webapplicatie (40%)
+## Deel 1: problemen oplossen in een webapplicatie
 
 [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk3/vulnerable-webapp/) hebben we een eenvoudige python/flask-webapp klaargezet, met drie grote kwetsbaarheden erin. Het is de bedoeling dat je deze kwetsbaarheden opspoort en voor elk een mitigatie aanbrengt in de code. Lees eerst de README en zorg dat de app up-and-running is. Voor Windows-gebruikers: deze app hoef je *niet* in WSL of als Docker-container te draaien.
 De kwetsbaarheden betreffen:
 
-* De manier waarop wachtwoorden worden opgeslagen (40%);
-* CSRF op het stemformulier (20%);
-* _Authorization bypass_, ook wel bekend als [Insecure direct object reference](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html), in bepaalde URL's (40%).
+* De manier waarop wachtwoorden worden opgeslagen;
+* CSRF op het stemformulier;
+* _Authorization bypass_, ook wel bekend als [Insecure direct object reference](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html), in bepaalde URL's.
 
 Dat je anoniem mag stemmen is **niet** één van de drie bugs. Kom je er niet uit? Overleg met klasgenoten en/of de practicumdocent.
 
-Laat je oplossing zien d.m.v. screenshots van de code, vóór en na je bugfix. Geef bij elk van de screenshots duidelijk aan om welke bug het gaat en highlight de relevante code. Je mag je uitwerking samengevoegen met die van deel 2 in één document en als doc(x) of pdf inleveren via het Inleverpunt.
+Laat je oplossing zien d.m.v. screenshots van de code, vóór en na je bugfix. Geef bij elk van de screenshots duidelijk aan om welke bug het gaat en highlight de relevante code. Je mag je uitwerking samengevoegen met die van deel 2 in één document en liefst als pdf inleveren via het Inleverpunt.
 
-## Deel 2: onderzoek naar security tooling (60%)
+## Deel 2: onderzoek naar security tooling
 
 Software-ontwikkelingsprojecten bestaan uit meerdere stappen en omvatten meer dan alleen ontwikkeling en testen. Bij elk project moet bijvoorbeeld rekening worden gehouden met regionale en internationale wetgeving en standaarden, die impact kunnen hebben op de requirements van het project. Deployment en onderhoud zijn daarnaast ook onderdeel van het proces van softwareontwikkeling en in moderne omgevingen maken DevOps-teams (een werkmethode waarbij development en onderhoud & support door hetzelfde team worden uitgevoerd) de grens tussen Software Security en IT Security nog waziger. 
 
@@ -73,7 +73,7 @@ Kies één (commerciële of niet-commerciële) tool die zich richt op het verbet
 
  * Zie [https://theqalead.com/tools/load-testing-tools/]( https://theqalead.com/tools/load-testing-tools/)
 
-**Modellen (beide aangestipt in het HC)**
+**Modellen (beide aangestipt in de kennisclips)**
 
  * [BSIMM](https://www.synopsys.com/software-integrity/software-security-services/bsimm-maturity-model.html)
  * [OWASP SAMM](https://owaspsamm.org/)
@@ -90,8 +90,8 @@ Verdiep je na het selecteren van een tool in de functionaliteit ervan d.m.v. fea
 
 Kopieer de eerste twee vragen en geef daarop antwoord. Beantwoord daarna de 5 vragen over de tool. Kopieer de vragen en schrijf je antwoord daar direct onder. Je hoeft slechts een paar zinnen per vraag te schrijven, maar **let erop dat je antwoord duidelijk laat zien dat je een doordachte analyse hebt uitgevoerd**. N.B.: zorg dat je in je antwoord geen tekst van de promotie-/informatiematerialen van de tool kopieert. Er geldt geen minimumlengte, zolang je maar zorgt dat je antwoorden goed onderbouwd zijn en aantonen dat je onderzoek hebt gedaan.
 
-De beide verslagen (deel 1 en 2) mogen worden samengevoegd in één document en als doc(x) of pdf worden ingeleverd via het Inleverpunt.
+De beide verslagen (deel 1 en 2) mogen worden samengevoegd in één document en liefst als pdf worden ingeleverd via het Inleverpunt.
 
-Wat betreft het gebruik van **ChatGPT** of andere soortgelijke technieken: het is niet toegestaan om je antwoorden te laten genereren, het dient eigen werk te zijn. Hier zal ook op gecontroleerd worden. Wat wel mag, is deelvragen voorleggen aan ChatGPT en de antwoorden hierop, voorzien van bronvermelding en eigen reflectie, mee te nemen in je antwoorden.
+Wat betreft het gebruik van AI: het is niet toegestaan om je antwoorden te laten genereren, het dient eigen werk te zijn. Hier zal ook op gecontroleerd worden. Wat wel mag, is deelvragen voorleggen aan een AI en de antwoorden hierop, voorzien van bronvermelding en eigen reflectie, mee te nemen in je antwoorden.
 
 Voor **herkansers** geldt dat zij een andere tool dan het voorgaande jaar dienen te kiezen! Hierop zal gecontroleerd worden.

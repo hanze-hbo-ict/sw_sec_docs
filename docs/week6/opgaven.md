@@ -1,15 +1,15 @@
 # Opgave week 6 – security: de verantwoordelijkheid van de ontwikkelaar(?)
 
-## Deel 1: toepassen op je eigen project (50%)
+## Deel 1: toepassen op je eigen project
 
 Tijd om alles wat je geleerd hebt toe te passen in de praktijk! Neem een (web)applicatie waar je zelf aan gebouwd hebt, bijvoorbeeld die van Webtechnologie of het IoT-project, en beantwoord de volgende vragen:
 
-1. Teken een DFD van de applicatie. Dit mag je eventueel samen doen met degenen met wie je de applicatie gebouwd hebt. (30%)
-2. Benoem de interfaces en pas bij elke interface threat modelling met STRIDE + de eerste letter D van LINDDUN (Detectability) toe. Welke letters zijn van toepassing? Leg kort uit waarom. (30%)
-3. Bij welke interface hebben de gevonden kwetsbaarheden bij elkaar genomen de grootste impact? Licht kort toe. (10%)
-4. Noem tenminste één tegenmaatregel (denk aan META) die je hiertegen kunt nemen. Laat zien hoe je deze kunt toepassen, bijvoorbeeld met een screenshot van kwetsbare code vóór en na een door jou bedachte _patch_. (30%)
+1. Teken een DFD van de applicatie. Dit mag je eventueel samen doen met degenen met wie je de applicatie gebouwd hebt.
+2. Benoem de interfaces en pas bij elke interface threat modelling met STRIDE + de eerste letter D van LINDDUN (Detectability) toe. Welke letters zijn van toepassing? Leg kort uit waarom.
+3. Bij welke interface hebben de gevonden kwetsbaarheden bij elkaar genomen de grootste impact? Licht kort toe.
+4. Noem tenminste één tegenmaatregel (denk aan META) die je hiertegen kunt nemen. Laat zien hoe je deze kunt toepassen, bijvoorbeeld met een screenshot van kwetsbare code vóór en na een door jou bedachte _patch_.
 
-## Deel 2: veilige TPS-reports voor Initech (50%)
+## Deel 2: veilige TPS-reports voor Initech
 
 Je hebt in deze cursus allemaal tools aangereikt gekregen om veilige(re) applicaties te bouwen. Betekent dit nu dat security exclusief jouw verantwoordelijkheid als engineer<sup>*</sup> is? Ben je als engineer immers niet ook onderdeel van een groter geheel (team, bedrijf, sector, land, EU...) en is security niet eerder een gedeelde verantwoordelijkheid? Welke partijen kun je allemaal aanwijzen en voor welk aspect van security (welk onderdeel van de Software Development Life Cycle) zouden zij verantwoordelijk kunnen/moeten zijn?
 
@@ -39,7 +39,7 @@ Maak van bovenstaande zes punten een lopend verhaal, en voeg een korte inleiding
 
 ## Hoe moet je het geheel inleveren?
 
-Het threat modelling-rapport en het advies aan Initech (deel 1 en 2) mogen worden samengevoegd in één document en als doc(x) of pdf worden ingeleverd via het Inleverpunt. Bij deel 1: vermeld duidelijk met wie je samen de DFD hebt gemaakt (mag evt. met je hele projectgroep) en met wie je eventueel als duo hebt samengewerkt. **Bij deel 2: dit is individueel!**
+Het threat modelling-rapport en het advies aan Initech (deel 1 en 2) mogen worden samengevoegd in één document en liefst als pdf worden ingeleverd via het Inleverpunt. Bij deel 1: vermeld duidelijk met wie je samen de DFD hebt gemaakt (mag evt. met je hele projectgroep) en met wie je eventueel als duo hebt samengewerkt. **Bij deel 2: dit is individueel!**
 
 -----
 <sup>*</sup> _Lees hier, afhankelijk van je gekozen richting, software engineer danwel network & security engineer._

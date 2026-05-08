@@ -2,7 +2,7 @@
 
 We gaan ons deze week verdiepen in de wondere wereld van de cryptografie, om de technieken die zo belangrijk zijn voor security en privacy beter te begrijpen. Daarnaast gaan we bezig met het bepalen van privacyrisico’s van een voorbeeldcasus aan de hand van de LINDDUN-methode. 
 
-## Deel 1: cryptografie (50%)
+## Deel 1: cryptografie
 
 * Windows: [download](https://www.cryptool.org/en/ct2/downloads/) en installeer CrypTool 2.
 * Mac: je zou bijvoorbeeld [Wine](https://www.winehq.org/) kunnen gebruiken om de Windows-executable te draaien.
@@ -62,7 +62,7 @@ Maak voor deze opdracht weer een nieuwe workspace aan.
 
 Graag een screenshot van je RSA-workspace, plus een samenvatting in eigen woorden van hoe het algoritme werkt (max. 5 regels).
 
-## Deel 2: privacy threat modelling (50%)
+## Deel 2: privacy threat modelling
 
 We gebruiken hiervoor dezelfde casus als vorige week. De DFD kun je dus hergebruiken!
 
