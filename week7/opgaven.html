@@ -838,14 +838,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Side-Channel Attack">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opdracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opdracht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opdracht">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introductie" class="md-nav__link">
+  <a href="#installaties-en-verbinding" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introductie
+        Installaties en verbinding
       
     </span>
   </a>
@@ -853,10 +864,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#opdracht" class="md-nav__link">
+  <a href="#de-aanval" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opdracht
+        De aanval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stappenplan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stappenplan
       
     </span>
   </a>
@@ -919,14 +941,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Side-Channel Attack">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opdracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opdracht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opdracht">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introductie" class="md-nav__link">
+  <a href="#installaties-en-verbinding" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introductie
+        Installaties en verbinding
       
     </span>
   </a>
@@ -934,10 +967,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#opdracht" class="md-nav__link">
+  <a href="#de-aanval" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opdracht
+        De aanval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stappenplan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stappenplan
       
     </span>
   </a>
@@ -969,7 +1013,6 @@
 <h1 id="opgave-week-7-netwerksecurity">Opgave week 7 – netwerksecurity<a class="headerlink" href="#opgave-week-7-netwerksecurity" title="Permanent link">&para;</a></h1>
 <p>Deze opgave is speciaal voor de Deeltijd-variant van het vak Security.</p>
 <h2 id="side-channel-attack">Side-Channel Attack<a class="headerlink" href="#side-channel-attack" title="Permanent link">&para;</a></h2>
-<h3 id="introductie">Introductie<a class="headerlink" href="#introductie" title="Permanent link">&para;</a></h3>
 <p>Je probeert in te loggen op een website, waarna je als reactie krijgt dat het wachtwoord niet klopt. Kun je het antwoord van de server gebruiken om het wachtwoord te kraken? </p>
 <p>Ja. Tenminste, als er geen rekening is gehouden met het risico van een timing attack. Een Timing Attack is een vorm van Side-Channel Attack waarbij de responstijd van de server gebruikt wordt om letter voor letter een wachtwoord te kraken. </p>
 <p>Neem als voorbeeld de volgende functie:</p>
@@ -985,17 +1028,20 @@
 <p>De functie gaat karakter voor karakter het gegeven wachtwoord bij langs en kijkt of het overeenkomt met het daadwerkelijke wachtwoord.
 Zodra die een verkeerd karakter tegenkomt eindigt de functie en wordt de toegang geweigerd; pas als alle karakters zijn gecheckt wordt de toegang verleend. </p>
 <p>Dit betekent dus dat hoe meer karakters (op een rij, vanaf het eerste karakter) juist zijn, hoe vaker de loop wordt herhaald, en dus hoe langer het duurt voor de functie een antwoord teruggeeft!  </p>
-<p>Met deze kennis zouden we kunnen proberen om het wachtwoord te kraken, en dat is ook precies wat we in deze opdracht gaan doen.  </p>
-<h3 id="opdracht">Opdracht<a class="headerlink" href="#opdracht" title="Permanent link">&para;</a></h3>
-<p>Er is een simpele server opgezet worden waar je kunt inloggen met je studentencode en een (voor jullie) onbekend wachtwoord. Deze is via de Eduroam-wifi op ZP11 toegankelijk via IP 20.224.193.77 en poort 8080.
-Voor testdoeleinden is het mogelijk om eerst <a href="#lokale-server">met een lokale server te werken</a>.</p>
-<p>Je krijgt cadeau dat het wachtwoord alléén uit kleine letters en cijfers bestaat.
-Deze server werkt aan de achterkant praktisch hetzelfde als de bovenstaande functie, en je kunt hem dus ook op dezelfde manier uitbuiten om het wachtwoord te kraken.
-Hiervoor maak je gebruik van <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk7/client.py">het bestand client.py</a> dat al enkele functies bevat om de verbinding tot stand te laten komen: <code>client_connect()</code> is een backend-functie die de directe koppeling met de server regelt en eventuele errors afvangt. <code>call_server()</code> maakt daar weer gebruik van, en kun je direct aanroepen in je oplossing. </p>
+<p>Met deze kennis zouden we kunnen proberen om het wachtwoord te kraken, en dat is ook precies wat we in deze opdracht gaan doen. </p>
+<h2 id="opdracht">Opdracht<a class="headerlink" href="#opdracht" title="Permanent link">&para;</a></h2>
+<p>We gaan een side-channel attack uitvoeren op een fictieve server, waarvan een Docker-versie is gemaakt. </p>
+<h3 id="installaties-en-verbinding">Installaties en verbinding<a class="headerlink" href="#installaties-en-verbinding" title="Permanent link">&para;</a></h3>
+<p>Zorg ervoor dat je Docker geïnstalleerd hebt en voer de volgende commando’s uit: </p>
+<p><code>docker pull el3an0r/hanze-timing-attack</code></p>
+<p><code>docker run -d -p 8080:3840 --name timingattack el3an0r/hanze-timing-attack</code></p>
+<p>Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met <code>docker ps</code> en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met <code>localhost:8080</code>.</p>
+<h3 id="de-aanval">De aanval<a class="headerlink" href="#de-aanval" title="Permanent link">&para;</a></h3>
+<p>Voor de aanval maak je gebruik van <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk7/client.py">het bestand client.py</a> dat al enkele functies bevat om de verbinding tot stand te laten komen: <code>client_connect()</code> is een backend-functie die de directe koppeling met de server regelt en eventuele errors afvangt. <code>call_server()</code> maakt daar weer gebruik van, en kun je direct aanroepen in je oplossing. </p>
 <p>NB: gebruik géén andere soorten aanvallen om het wachtwoord te proberen te kraken! De server is niet bijzonder robuust en als je hem platgooit heb je zowel jezelf als alle andere studenten ermee. 
 De functie <code>call_server()</code> mag naar wens worden aangepast, maar zorg dat je de regel met <code>time.sleep(0.001)</code> laat staan; dit zorgt ervoor dat jullie de server niet per ongeluk DDoS’en met zijn allen. Het verbindingsgedrag van de clients wordt overigens bijgehouden.  </p>
-<p>Hierna staan de eisen aan het verslag en een stappenplan dat je kunt aanhouden om de opdracht te maken. </p>
-<h4 id="stappenplan">Stappenplan<a class="headerlink" href="#stappenplan" title="Permanent link">&para;</a></h4>
+<p>Er staat in deze server één persoon geregistreerd, met gebruikersnaam 000000. Met het volgende stappenplan gaan we erachter komen welk wachtwoord (bestaand uit kleine letters en cijfers) deze persoon heeft. </p>
+<h3 id="stappenplan">Stappenplan<a class="headerlink" href="#stappenplan" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Controleer of de functionaliteit van de verbinding: werkt de test-aanroep onderaan de code? </p>
@@ -1004,18 +1050,17 @@ De functie <code>call_server()</code> mag naar wens worden aangepast, maar zorg 
 <p>Als de verbinding werkt zul je eerst een manier nodig hebben om te timen hoe lang de server erover doet om een antwoord te sturen. Pas de code aan zodat je voor elke inlogpoging ziet hoe veel tijd er tussen het versturen van de credentials en het ontvangen van het antwoord zit. </p>
 </li>
 <li>
-<p>Nu je kunt meten hoe lang de server doet over een antwoord kunnen we beginnen met kraken! Stap één is het bepalen van de lengte van het wachtwoord. Schrijf een functie die de responstijd van wachtwoorden van verschillende lengte meet, en deze gebruikt om de juiste lengte te bepalen.
-Denk goed na over waar in de code je het tijdsverschil meet.<br>
-<em>Hint: variabele vertraging in het netwerk voegt willekeur toe aan de responstijd.</em><br>
-Wat kun je doen om je metingen betrouwbaarder te maken?<br>
-Denk hierbij bijvoorbeeld aan een statistische analyse. </p>
+<p>Nu je kunt meten hoe lang de server doet over een antwoord kunnen we beginnen met kraken! Stap één is het bepalen van de lengte van het wachtwoord. Schrijf een functie die de responstijd van wachtwoorden van verschillende lengte meet, en deze gebruikt om de juiste lengte te bepalen.</p>
+</li>
+<li>
+<p>Denk goed na over waar in de code je het tijdsverschil meet. <em>Hint: variabele vertraging in het netwerk voegt willekeur toe aan de responstijd.</em> Wat kun je doen om je metingen betrouwbaarder te maken? Denk hierbij bijvoorbeeld aan een statistische analyse. </p>
 </li>
 <li>
 <p>Nu je de juiste lengte hebt kun je beginnen met het kraken van het wachtwoord zelf.
 Doe dit door eerst een ontwerp te maken met <a href="https://en.wikipedia.org/wiki/Pseudocode">pseudo-code</a> en er met zijn tweeën naar te kijken alvorens je het implementeert.
 Doe dit vóórdat je het internet raadpleegt voor hulp!<br>
 <em>Hint: je zult teken voor teken aan de slag moeten gaan!</em><br>
-NB: het wachtwoord bestaat uit alleen kleine letters en cijfers. Mocht je je aanval willen testen met een gebruiker waarvan het wachtwoord bekend is, dan kun je studentnummer <em>000000</em> gebruiken, deze heeft het wachtwoord <em>hunter2</em>. </p>
+NB: het wachtwoord bestaat uit alleen kleine letters en cijfers. </p>
 </li>
 </ol>
 <h4 id="verslag">Verslag<a class="headerlink" href="#verslag" title="Permanent link">&para;</a></h4>
@@ -1059,8 +1104,7 @@ NB: het wachtwoord bestaat uit alleen kleine letters en cijfers. Mocht je je aan
 <li>Hoe ben je omgegaan met de variabele vertraging van het netwerk? Welke oplossingen heb je geprobeerd die niet werkten, en waarom werkten ze niet? </li>
 <li>Aansluitend op bovenstaande onderdeel: obstakels die je tijdens het maken van de opgave bent tegengekomen en hoe je ze opgelost hebt.  </li>
 </ul>
-<p>Noem in het hoofdstuk “Resultaten” ook het “gestolen” wachtwoord van jou / jullie beiden (die van de opgave dus – je echte wachtwoorden mag je houden 😉).</p>
-<p>Als je het wachtwoord niet hebt kunnen vinden resulteert dat niet per se een onvoldoende, maar je zult dan wel een erg goede verslaglegging van je ontwerp- en troubleshooting-processen moeten vastleggen en kunnen aantonen dat je goed over alle obstakels hebt nagedacht. </p>
+<p>Noem in het hoofdstuk “Resultaten” ook het “gestolen” wachtwoord van onze gedupeerde. Als je het wachtwoord niet hebt kunnen vinden resulteert dat niet per se een onvoldoende, maar je zult dan wel een erg goede verslaglegging van je ontwerp- en troubleshooting-processen moeten vastleggen en kunnen aantonen dat je goed over alle obstakels hebt nagedacht. </p>
 <h4 id="inleveren">Inleveren<a class="headerlink" href="#inleveren" title="Permanent link">&para;</a></h4>
 <p>Voor deze weekopgave lever je de volgende onderdelen in: </p>
 <ul>
@@ -1069,15 +1113,6 @@ NB: het wachtwoord bestaat uit alleen kleine letters en cijfers. Mocht je je aan
 <li>Een .pdf van de eerste volledige versie van je pseudo-code (als je je pseudo-code schriftelijk hebt gemaakt is een .pdf met/van een foto ook goed).</li>
 <li>Een .pdf van het verslag.</li>
 </ul>
-<h4 id="lokale-server">Lokale server<a class="headerlink" href="#lokale-server" title="Permanent link">&para;</a></h4>
-<p>Als je wil werken aan je code, maar geen toegang hebt tot de server kun je gebruik maken van een lokale versie middels Docker. Zorg ervoor dat je Docker geïnstalleerd hebt en voer de volgende commando’s uit: </p>
-<p><code>docker pull el3an0r/hanze-timing-attack</code></p>
-<p><code>docker run -d -p 8080:3840 --name timingattack el3an0r/hanze-timing-attack</code></p>
-<p>Als het goed is draait er nu een Docker-container met daarop een versie van de server. Je kunt het nog even controleren met <code>docker ps</code> en/of door, bijvoorbeeld met Postman, een Websocket-verbinding te maken met <code>localhost:8080</code>.
-De server op de docker-container bevat overigens alleen de user <em>000000</em> met wachtwoord <em>hunter2</em>. </p>
-<p>NB: de Docker-server draait lokaal op je eigen machine en heeft dus geen last van netwerk-interferentie.
-Dat betekent dat een aanval die alleen is getest op de Docker-server hoogstwaarschijnlijk niet werkt op de echte server.
-Houd hier dus rekening mee en zorg dat je je oplossing ook op locatie test. Tip: host de Docker-server bij voorkeur op een ander apparaat dan de machine vanwaar je de aanval uitvoert. </p>
 
 
 
