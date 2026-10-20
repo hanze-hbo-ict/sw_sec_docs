@@ -20,6 +20,10 @@ Met Docker is het mogelijk om een webapplicatie te starten in een vooropgezette 
 
 Download en installeer Docker via [deze link](https://docs.docker.com/get-docker/).
 
+Lukt het je niet om op je eigen Windows-laptop Docker Desktop te downloaden, bijvoorbeeld omdat je als Admin vooralsnog 'elevated privilege' nodig hebt? Je kunt docker ook installeren in je WSL-omgeving uit week 1. Hiervoor raden we aan om eens
+```docker```
+in te typen in je WSL en de instructies vanaf daar te volgen. 
+
 ## Installatie van de Juice Shop-container
 
 Download en draai nu de Juice Shop Docker-container met de volgende commando’s:
@@ -48,6 +52,8 @@ Nu gaan we daadwerkelijk aan de slag met het opsporen van beveiligingsproblemen 
 Toon je antwoord aan met een of meer screenshots waaruit duidelijk naar voren komt dat je succesvol bent ingelogd. Laat ook de invoer zien die deze illegale inlog mogelijk maakt. Beschrijf hierbij kort welke stappen je hebt uitgevoerd om tot je antwoord te komen. (20%)
 
 2\. Er zit een groot probleem in de Juice Shop waardoor het mogelijk is om een bestelling te plaatsen met een negatief totaalbedrag. Hierdoor zou je in theorie geld toe moeten krijgen. Ga op zoek naar een manier om dit te veroorzaken. Tip: via ZAP zie je alle uitgaande requests. Zet eens een paar producten in je winkelmandje, pas wat aan en ga op zoek naar PUT- of POST-requests die je aan kunt passen. Om een bestelling te plaatsen zul je eerst moeten inloggen. Hiervoor kun je een account aanmaken, of je maakt gebruik van de resultaten van je hack-werk bij opgave 1...
+
+NB: het kan helpen om de Juice Shop te runnen in Firefox in plaats van Edge of Chrome. Bij die browsers werkt ZAP vaak beter. 
 
 Toon je antwoord aan met de PDF van je bestelling waar een negatief te betalen bedrag op staat. Laat daarnaast je aangepaste request zien en beschrijf welke stappen je hebt uitgevoerd om tot je antwoord te komen. (40%)
 

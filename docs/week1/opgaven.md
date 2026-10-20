@@ -4,36 +4,19 @@
 
 Deze opdracht kan op Linux, Mac en Windows (WSL) worden uitgevoerd.
 
-[Hydra](https://github.com/vanhauser-thc/thc-hydra) is een tool om wachtwoorden mee te brute-forcen, wat ook een vorm van fuzzing is.
+[Hydra](https://github.com/vanhauser-thc/thc-hydra) is een tool om wachtwoorden mee te brute-forcen, wat ook een vorm van fuzzing is. 
 
-### Hydra installeren (1 - voor Windows)
+<details>
+<summary>### Hydra installeren</summary>
 
-Windows-gebruikers moeten eerst het [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL) installeren. De standaard-distributie, Ubuntu, is prima. Na installatie beschik je over een Linux-prompt en kun je onderstaande opdrachten uitvoeren (en nog veel meer - zo heb je WSL nodig om Docker, waar we volgende week mee bezig gaan, te kunnen draaien). [Wargames van Over the Wire](https://overthewire.org/wargames/) is een web-app waar je interactief veel over het gebruiken van verschillende Linuxtools kunt leren. Een must voor ICT'ers. Advies is om te beginnen met de Bandit-wargame. Lees [hier](https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/) hoe je bestanden van en naar je Linux-omgeving kunt kopiëren.
+#### Windows
+Windows-gebruikers: op [deze](https://hanze-hbo-ict.github.io/sw_sec_docs/week1/hydraWindows.html) pagina staan uitgebreide instructies voor het installeren en runnen van hydra en je (eigen) webapp.
 
-#### Mogelijke problemen en oplossingen bij WSL
+#### MacOS
+Mac-gebruikers kunnen hydra installeren via een [Brew-package](https://formulae.brew.sh/formula/hydra). 
 
-Heb je WSL al geïnstalleerd maar krijg je de melding "Windows Subsystem for Linux has no installed distributions"? Probeer het volgende commando te geven (op de commandline): ``wsl --install -d ubuntu``
-
-Mocht je tijdens het clonen van een Github-repository de foutmelding "Unable to resolve github.com in WSL" krijgen, dan de volgende stappen doorlopen om de default nameserver aan te passen:
-
-* ``sudo nano /etc/wsl.conf``
-* voeg toe:
-```
-[network]
-generateResolvConf = false
-```
-* ``sudo nano /etc/resolv.conf``
-* comment originele nameserver uit (met #)
-* voeg toe:
-```
-nameserver 8.8.8.8
-nameserver 8.8.4.4
-```
-* Opnieuw proberen, of bijv. eerst 'ping google.com'
-
-### Hydra installeren (2)
-
-We beginnen nu met de installatie van [Hydra](https://github.com/vanhauser-thc/thc-hydra). 
+#### Linux
+Linux-gebruikers kunnen hydra installeren via apt. 
 
 Allereerst willen we er zeker van zijn dat alle relevante packages goed geïnstalleerd en up-to-date zijn. De eerste stap is om de package-manager zelf te updaten.
 ```
@@ -46,8 +29,13 @@ De makkelijkste manier om Hydra te installeren is als package:
 ```
 sudo apt install hydra-gtk
 ```
+</details>
 
-### Hydra draaien op een webapp
+<details>
+<summary>### Hydra draaien op een webapp</summary>
+Geen eigen webapp (meer) paraat? [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1) kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren.
+In de README staat ook [een link naar een image op DockerHub](https://hub.docker.com/r/tomerikroos/webapp-hydra), nog gemakkelijker.
+Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.
 
 Onderstaande code is een voorbeeldcommando op het login-formulier van een lokale Flask-webapp, draaiend op poort 5000. Hydra probeert hier voor gebruiker (email) "henk@hanze.nl" alle wachtwoorden met 4 cijfers. Bestudeer de [documentatie van Hydra](https://github.com/vanhauser-thc/thc-hydra) om te leren hoe de -x-optie en de andere parameters precies werken.
 
@@ -59,7 +47,7 @@ Om dit werkend te krijgen, zijn er enkele aandachtspunten:
 
 * Zet de [CSRF-controle](https://www.geeksforgeeks.org/csrf-protection-in-flask/) uit door ``app.config['WTF_CSRF_ENABLED'] = False`` in je code op te nemen, op de plek waar je ook de andere configuratie, zoals de ``SECRET_KEY``, instelt.
 * Zorg dat bij een incorrecte inlog de tekst "Inlog mislukt." (of iets anders - maar pas dan je Hydra-aanroep aan) in beeld komt, zodat Hydra weet wanneer een login-poging mislukt is.
-* Windows-gebruikers moeten de webapp draaien vanuit hun WSL/Linux-console, dus **niet** vanuit de Windows-omgeving, anders kan Hydra er niet bij. Je gaat in je Linux-terminal naar de juiste map (bijv. ``cd /mnt/c/Users/user/swsec/pract-wk1``) en start daar de applicatie (bijv. ``python3 app.py``). Het is aan te raden om eerst een aparte virtual environment aan te maken en daarin de requirements voor je webapp te installeren. Dit werkt grotendeels hetzelfde als onder Windows, alleen de activatie van de venv gaat anders: ``source my_venv/bin/activate``.
+</details>
 
 ### De opdracht
 
@@ -71,9 +59,7 @@ Om dit werkend te krijgen, zijn er enkele aandachtspunten:
 
 Lever een kort verslagje in over deze "penetration test" (pentest), inclusief screenshots van je Hydra-aanroeptijden, metingen, conclusies en drie tegenmaatregelen.
 
-<sup>*</sup> Geen eigen webapp (meer) paraat? [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1) kun je er eentje vinden die je ook mag gebruiken.
-In de README staat ook [een link naar een image op DockerHub](https://hub.docker.com/r/tomerikroos/webapp-hydra), nog gemakkelijker.
-Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.
+<sup>*</sup> Geen eigen webapp (meer) paraat? [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1) kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren. In de README staat ook [een link naar een image op DockerHub](https://hub.docker.com/r/tomerikroos/webapp-hydra), nog gemakkelijker. Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.
 
 ## Deel 2: Fuzzing met Radamsa
 
