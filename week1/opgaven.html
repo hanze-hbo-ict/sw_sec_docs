@@ -352,6 +352,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#hydra-installeren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hydra installeren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hydra-draaien-op-een-webapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hydra draaien op een webapp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#de-opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -964,6 +986,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#hydra-installeren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hydra installeren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hydra-draaien-op-een-webapp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hydra draaien op een webapp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#de-opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1050,47 +1094,33 @@
 <h2 id="deel-1-wachtwoorden-kraken-met-hydra">Deel 1: Wachtwoorden kraken met Hydra<a class="headerlink" href="#deel-1-wachtwoorden-kraken-met-hydra" title="Permanent link">&para;</a></h2>
 <p>Deze opdracht kan op Linux, Mac en Windows (WSL) worden uitgevoerd.</p>
 <p><a href="https://github.com/vanhauser-thc/thc-hydra">Hydra</a> is een tool om wachtwoorden mee te brute-forcen, wat ook een vorm van fuzzing is. </p>
-<details>
-<summary>### Hydra installeren</summary>
-
-#### Windows
-Windows-gebruikers: op [deze](https://hanze-hbo-ict.github.io/sw_sec_docs/week1/hydraWindows.html) pagina staan uitgebreide instructies voor het installeren en runnen van hydra en je (eigen) webapp.
-
-#### MacOS
-Mac-gebruikers kunnen hydra installeren via een [Brew-package](https://formulae.brew.sh/formula/hydra). 
-
-#### Linux
-Linux-gebruikers kunnen hydra installeren via apt. 
-
-Allereerst willen we er zeker van zijn dat alle relevante packages goed geïnstalleerd en up-to-date zijn. De eerste stap is om de package-manager zelf te updaten.
+<h3 id="hydra-installeren">Hydra installeren<a class="headerlink" href="#hydra-installeren" title="Permanent link">&para;</a></h3>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p>Windows-gebruikers: op <a href="https://hanze-hbo-ict.github.io/sw_sec_docs/week1/hydraWindows.html">deze</a> pagina staan uitgebreide instructies voor het installeren en runnen van hydra en je (eigen) webapp.</p>
+<h4 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h4>
+<p>Mac-gebruikers kunnen hydra installeren via een <a href="https://formulae.brew.sh/formula/hydra">Brew-package</a>. </p>
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
+<p>Linux-gebruikers kunnen hydra installeren via apt. </p>
+<p>Allereerst willen we er zeker van zijn dat alle relevante packages goed geïnstalleerd en up-to-date zijn. De eerste stap is om de package-manager zelf te updaten.
 <div class="highlight"><pre><span></span><code>sudo apt update
 sudo apt install libssl-dev libssh-dev libidn11-dev libpcre3-dev libgtk2.0-dev libmysqlclient-dev libpq-dev libsvn-dev
 </code></pre></div>
-<!-- Mochten git, gcc en/of make nog niet geïnstalleerd zijn, installeer deze dan eerst via je package manager (bijvoorbeeld Ubuntu Linux of WSL: ``sudo apt-get install git gcc make``). -->
-
-De makkelijkste manier om Hydra te installeren is als package:
+Mochten git, gcc en/of make nog niet geïnstalleerd zijn, installeer deze dan eerst via je package manager (bijvoorbeeld Ubuntu Linux of WSL: <code>sudo apt-get install git gcc make</code>).</p>
+<p>De makkelijkste manier om Hydra te installeren is als package:
 <div class="highlight"><pre><span></span><code>sudo apt install hydra-gtk
-</code></pre></div>
-</details>
-
-<details>
-<summary>### Hydra draaien op een webapp</summary>
-Geen eigen webapp (meer) paraat? [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1) kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren.
-In de README staat ook [een link naar een image op DockerHub](https://hub.docker.com/r/tomerikroos/webapp-hydra), nog gemakkelijker.
-Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.
-
-Onderstaande code is een voorbeeldcommando op het login-formulier van een lokale Flask-webapp, draaiend op poort 5000. Hydra probeert hier voor gebruiker (email) "henk@hanze.nl" alle wachtwoorden met 4 cijfers. Bestudeer de [documentatie van Hydra](https://github.com/vanhauser-thc/thc-hydra) om te leren hoe de -x-optie en de andere parameters precies werken.
-
-``hydra -l henk@hanze.nl -x 4:4:1 127.0.0.1 -s 5000 http-post-form "/login:email=^USER^&password=^PASS^:Inlog mislukt."``
-
-Let op: ondanks dat het misschien op meerdere regels wordt weergegeven, is bovenstaande één commmando dat op één regel dient te worden uitgevoerd! De volgorde die is weergegeven werkt onder Windows; Mac-gebruikers moeten mogelijk de volgorde van de argumenten aanpassen (de -s-parameter vóór het IP-adres).
-
-Om dit werkend te krijgen, zijn er enkele aandachtspunten:
-
-* Zet de [CSRF-controle](https://www.geeksforgeeks.org/csrf-protection-in-flask/) uit door ``app.config['WTF_CSRF_ENABLED'] = False`` in je code op te nemen, op de plek waar je ook de andere configuratie, zoals de ``SECRET_KEY``, instelt.
-* Zorg dat bij een incorrecte inlog de tekst "Inlog mislukt." (of iets anders - maar pas dan je Hydra-aanroep aan) in beeld komt, zodat Hydra weet wanneer een login-poging mislukt is.
-</details>
-
+</code></pre></div></p>
+<h3 id="hydra-draaien-op-een-webapp">Hydra draaien op een webapp<a class="headerlink" href="#hydra-draaien-op-een-webapp" title="Permanent link">&para;</a></h3>
+<p>Geen eigen webapp (meer) paraat? <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1">Hier</a> kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren.
+In de README staat ook <a href="https://hub.docker.com/r/tomerikroos/webapp-hydra">een link naar een image op DockerHub</a>, nog gemakkelijker.
+Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.</p>
+<p>Onderstaande code is een voorbeeldcommando op het login-formulier van een lokale Flask-webapp, draaiend op poort 5000. Hydra probeert hier voor gebruiker (email) "<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#110;&#107;&#64;&#104;&#97;&#110;&#122;&#101;&#46;&#110;&#108;">&#104;&#101;&#110;&#107;&#64;&#104;&#97;&#110;&#122;&#101;&#46;&#110;&#108;</a>" alle wachtwoorden met 4 cijfers. Bestudeer de <a href="https://github.com/vanhauser-thc/thc-hydra">documentatie van Hydra</a> om te leren hoe de -x-optie en de andere parameters precies werken.</p>
+<p><code>hydra -l henk@hanze.nl -x 4:4:1 127.0.0.1 -s 5000 http-post-form "/login:email=^USER^&amp;password=^PASS^:Inlog mislukt."</code></p>
+<p>Let op: ondanks dat het misschien op meerdere regels wordt weergegeven, is bovenstaande één commmando dat op één regel dient te worden uitgevoerd! De volgorde die is weergegeven werkt onder Windows; Mac-gebruikers moeten mogelijk de volgorde van de argumenten aanpassen (de -s-parameter vóór het IP-adres).</p>
+<p>Om dit werkend te krijgen, zijn er enkele aandachtspunten:</p>
+<ul>
+<li>Zet de <a href="https://www.geeksforgeeks.org/csrf-protection-in-flask/">CSRF-controle</a> uit door <code>app.config['WTF_CSRF_ENABLED'] = False</code> in je code op te nemen, op de plek waar je ook de andere configuratie, zoals de <code>SECRET_KEY</code>, instelt.</li>
+<li>Zorg dat bij een incorrecte inlog de tekst "Inlog mislukt." (of iets anders - maar pas dan je Hydra-aanroep aan) in beeld komt, zodat Hydra weet wanneer een login-poging mislukt is.</li>
+</ul>
 <h3 id="de-opdracht">De opdracht<a class="headerlink" href="#de-opdracht" title="Permanent link">&para;</a></h3>
 <p>1. Je gaat een (misschien wel je eigen) Webtech- of IOT-applicatie<sup>*</sup> brute-forcen! Maak een gebruiker aan met een simpel wachtwoord, bijvoorbeeld bestaande uit 3 cijfers, en kijk hoelang Hydra erover doet om het te kraken. Maak nu het wachtwoord stapsgewijs complexer door meer cijfers en eventueel letters en leestekens (pas dan wel je -x-parameter aan) toe te voegen, en noteer steeds hoelang Hydra er ongeveer over doet. Als Hydra er te lang over gaat doen, kun je stoppen. Welke wachtwoord-complexiteit vind jij veilig genoeg? Schaalt dit naar een echte productie-applicatie of gelden er dan toch nog strengere eisen, en waarom?</p>
 <p>2. Een andere, vaak succesvollere, aanpak die hackers gebruiken, is een <em>dictionary attack</em>. Hierbij wordt een lijst met (gestolen) wachtwoorden gebruikt. Een bekende lijst is RockYou.txt, waarvan we <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1/rockyou">hier</a> het eerste gedeelte voor je klaar hebben gezet. Pas je Hydra-aanroep aan door het -x-gedeelte weg te halen en te vervangen door -P &lt;pad naar rockyou_first10000.txt&gt;. Maak weer een gebruiker aan, ditmaal met een wachtwoord uit de lijst. Kies eerst een willekeurig wachtwoord uit het begin, dan uit het midden en tot slot uit het einde van de lijst. Hoe lang duurt het kraken in deze drie gevallen?</p>
