@@ -1,19 +1,19 @@
 # Opgave week 6 – security: de verantwoordelijkheid van de ontwikkelaar(?)
 
-## Deel 1: toepassen op je eigen project (50%)
+## Deel 1: toepassen op je eigen project
 
 Tijd om alles wat je geleerd hebt toe te passen in de praktijk! Neem een (web)applicatie waar je zelf aan gebouwd hebt, bijvoorbeeld die van Webtechnologie of het IoT-project, en beantwoord de volgende vragen:
 
-1. Teken een DFD van de applicatie. Dit mag je eventueel samen doen met degenen met wie je de applicatie gebouwd hebt. (30%)
-2. Benoem de interfaces en pas bij elke interface threat modelling met STRIDE + de eerste letter D van LINDDUN (Detectability) toe. Welke letters zijn van toepassing? Leg kort uit waarom. (30%)
-3. Bij welke interface hebben de gevonden kwetsbaarheden bij elkaar genomen de grootste impact? Licht kort toe. (10%)
-4. Noem tenminste één tegenmaatregel (denk aan META) die je hiertegen kunt nemen. Laat zien hoe je deze kunt toepassen, bijvoorbeeld met een screenshot van kwetsbare code vóór en na een door jou bedachte _patch_. (30%)
+1. Teken een DFD van de applicatie. Dit mag je eventueel samen doen met degenen met wie je de applicatie gebouwd hebt.
+2. Benoem de interfaces en pas bij elke interface threat modelling met STRIDE + de eerste letter D van LINDDUN (Detectability) toe. Welke letters zijn van toepassing? Leg kort uit waarom.
+3. Bij welke interface hebben de gevonden kwetsbaarheden bij elkaar genomen de grootste impact? Licht kort toe.
+4. Noem tenminste één tegenmaatregel (denk aan META) die je hiertegen kunt nemen. Laat zien hoe je deze kunt toepassen, bijvoorbeeld met een screenshot van kwetsbare code vóór en na een door jou bedachte _patch_.
 
-## Deel 2: veilige TPS-reports voor Initech (50%)
+## Deel 2: veilige TPS-reports voor Initech
 
 Je hebt in deze cursus allemaal tools aangereikt gekregen om veilige(re) applicaties te bouwen. Betekent dit nu dat security exclusief jouw verantwoordelijkheid als engineer<sup>*</sup> is? Ben je als engineer immers niet ook onderdeel van een groter geheel (team, bedrijf, sector, land, EU...) en is security niet eerder een gedeelde verantwoordelijkheid? Welke partijen kun je allemaal aanwijzen en voor welk aspect van security (welk onderdeel van de Software Development Life Cycle) zouden zij verantwoordelijk kunnen/moeten zijn?
 
-Ga eerst over deze vragen in discussie je klasgenoten en vorm zo je eigen mening.
+Ga eerst over deze vragen in discussie met je klasgenoten en vorm zo je eigen mening.
 
 Dan de casus (kenners herkennen in deze casus wellicht delen van de cultfilm [Office Space](https://www.imdb.com/title/tt0151804/), verplichte kost voor elke ICT'er). Je bent engineer<sup>*</sup> bij de firma Initech. Het management heeft het plan opgevat om maandelijks zogenaamde [TPS Reports](https://en.wikipedia.org/wiki/TPS_report#Office_Space) te laten genereren die allerlei informatie bevatten over de productiviteit van elke medewerker. Denk hierbij aan data als: ziekte en ander verzuim, aantal vergaderuren, aantal geschreven regels code, aantal ingediende pull-requests, percentage goedgekeurde pull-requests etc. De rapporten zijn intern en bestemd voor de managers van de betreffende medewerkers. Aan jou is gevraagd om de applicatie te (helpen) ontwikkelen die deze rapporten kan genereren en verdelen onder de juiste personen.
 
@@ -29,7 +29,7 @@ _Voorbeeld: in de Testfase draaien wij als ontwikkelteam een SAST-tool over de c
 
 Je bent natuurlijk niet de enige binnen dit project. Noem 3 andere partijen die volgens jou ook een rol (zouden moeten) hebben bij de security van de TPS Reports, plus bij elk een korte beschrijving wat die rol dan zou moeten inhouden en in welke fase(s) van de SDLC deze van toepassing is.
 
-Met _partijen_ bedoelen we onder andere: andere teamleden, andere functies of afdelingen binnen hetzelfde bedrijf, de klant, andere bedrijven, providers, (cloud)hosts, vakbonden, politie, bestuursorganen zoals gemeentes, provincies, de Tweede Kamer, de regering en de EU maar ook bijvoorbeeld de Autoriteit Persoonsgegevens. Eigen toevoegingen zijn van harte welkom!
+Met _partijen_ bedoelen we: andere teamleden, andere functies of afdelingen binnen hetzelfde bedrijf, de klant, andere bedrijven, providers, (cloud)hosts, vakbonden, politie, bestuursorganen zoals gemeentes, provincies, de Tweede Kamer, de regering en de EU maar ook bijvoorbeeld de Autoriteit Persoonsgegevens. Eigen toevoegingen zijn van harte welkom!
 
 _Voorbeeld: er moet een security-expert (intern of van een extern bureau) bij het project betrokken worden, zodat diegene de requirements, ontwerpen, gerealiseerde code en de uiteindelijke setup kan controleren op veiligheidsissues._
 
@@ -39,7 +39,7 @@ Maak van bovenstaande zes punten een lopend verhaal, en voeg een korte inleiding
 
 ## Hoe moet je het geheel inleveren?
 
-Het threat modelling-rapport en het advies aan Initech (deel 1 en 2) mogen worden samengevoegd in één document en als doc(x) of pdf worden ingeleverd via het Inleverpunt. Bij deel 1: vermeld duidelijk met wie je samen de DFD hebt gemaakt (mag evt. met je hele projectgroep) en met wie je eventueel als duo hebt samengewerkt. **Bij deel 2: dit is individueel!**
+Het threat modelling-rapport en het advies aan Initech (deel 1 en 2) mogen worden samengevoegd in één document en liefst als pdf worden ingeleverd via het Inleverpunt. Bij deel 1: vermeld duidelijk met wie je samen de DFD hebt gemaakt (mag eventueel met je hele projectgroep) en met wie je eventueel als duo hebt samengewerkt. **Bij deel 2: dit is individueel!**
 
 -----
 <sup>*</sup> _Lees hier, afhankelijk van je gekozen richting, software engineer danwel network & security engineer._

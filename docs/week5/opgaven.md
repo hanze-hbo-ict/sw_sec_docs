@@ -2,7 +2,7 @@
 
 We gaan ons deze week verdiepen in de wondere wereld van de cryptografie, om de technieken die zo belangrijk zijn voor security en privacy beter te begrijpen. Daarnaast gaan we bezig met het bepalen van privacyrisico’s van een voorbeeldcasus aan de hand van de LINDDUN-methode. 
 
-## Deel 1: cryptografie (50%)
+## Deel 1: cryptografie
 
 * Windows: [download](https://www.cryptool.org/en/ct2/downloads/) en installeer CrypTool 2.
 * Mac: je zou bijvoorbeeld [Wine](https://www.winehq.org/) kunnen gebruiken om de Windows-executable te draaien.
@@ -58,11 +58,11 @@ Maak voor deze opdracht weer een nieuwe workspace aan.
 
 1.3.b.\ Plaats een tweede RSA-component, nu met Action: Decryption, in de workspace. Sluit hem aan op de Message-output van de RSA, en op de RSA Key Generator (het private gedeelte, N en **d**). De output gaat weer via een String Encode naar een Text Output, waar je als het goed is de oorspronkelijke tekst ziet verschijnen.
 
-1.3.c.\ (optioneel, maar wel leuk) Werk samen met een klasgenoot. Deel je publieke sleutel (N en e) met diegene en vraag om jou een daarmee gecodeerd bericht terug te sturen. Ontsleutel dit met je private sleutel (N en d). Als dit gelukt is, draai je de rollen om.
+1.3.c.\ (optioneel, maar wel leuk) Werk samen met een klasgenoot. Deel je publieke sleutel (N en e) met diegene en vraag om jou een daarmee gecodeerd bericht terug te sturen. Ontsleutel dit met je private sleutel (N en d). Als dit gelukt is, draai je de rollen om. NB: rechtstreeks copy-pasten van de output van de RSA-encoder werkt niet! De truc is om deze output eerst met een String Encode om te zetten naar Base64. Je klasgenoot kan deze Base64-gecodeerde tekst met behulp van een String Encode weer omzetten naar Byte[], wat dan diens RSA-decoder in kan.
 
 Graag een screenshot van je RSA-workspace, plus een samenvatting in eigen woorden van hoe het algoritme werkt (max. 5 regels).
 
-## Deel 2: privacy threat modelling (50%)
+## Deel 2: privacy threat modelling
 
 We gebruiken hiervoor dezelfde casus als vorige week. De DFD kun je dus hergebruiken!
 
