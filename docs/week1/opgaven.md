@@ -6,8 +6,7 @@ Deze opdracht kan op Linux, Mac en Windows (WSL) worden uitgevoerd.
 
 [Hydra](https://github.com/vanhauser-thc/thc-hydra) is een tool om wachtwoorden mee te brute-forcen, wat ook een vorm van fuzzing is. 
 
-<details>
-<summary>### Hydra installeren</summary>
+### Hydra installeren
 
 #### Windows
 Windows-gebruikers: op [deze](https://hanze-hbo-ict.github.io/sw_sec_docs/week1/hydraWindows.html) pagina staan uitgebreide instructies voor het installeren en runnen van hydra en je (eigen) webapp.
@@ -29,10 +28,7 @@ De makkelijkste manier om Hydra te installeren is als package:
 ```
 sudo apt install hydra-gtk
 ```
-</details>
-
-<details>
-<summary>### Hydra draaien op een webapp</summary>
+### Hydra draaien op een webapp
 Geen eigen webapp (meer) paraat? [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1) kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren.
 In de README staat ook [een link naar een image op DockerHub](https://hub.docker.com/r/tomerikroos/webapp-hydra), nog gemakkelijker.
 Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.
