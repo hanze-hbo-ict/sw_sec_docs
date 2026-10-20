@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -242,6 +242,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week1/hydraWindows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hydra-instructies voor Windows-gebruikers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -961,6 +989,9 @@
 <p>We gaan in deze opdracht aan de slag met de Juice Shop-webapplicatie, die een aantal grote beveiligingslekken heeft. De Juice Shop-applicatie gaan we via Docker draaien op je computer. Hierna gaan we beveiligingslekken opsporen in de applicatie.</p>
 <p>Met Docker is het mogelijk om een webapplicatie te starten in een vooropgezette omgeving, ook wel <em>container</em> genoemd. Je kunt een Docker-container downloaden en deze bevat dan zowel een volledige ingerichte serveromgeving als een geïnstalleerde en geconfigureerde webapplicatie. Let op: als je VM-software hebt geïnstalleerd, zal Docker mogelijk niet werken. Maak in dit geval een Virtual Machine naar keuze (een servervariant van Linux is vaak het snelst) en installeer Docker in deze VM.</p>
 <p>Download en installeer Docker via <a href="https://docs.docker.com/get-docker/">deze link</a>.</p>
+<p>Lukt het je niet om op je eigen Windows-laptop Docker Desktop te downloaden, bijvoorbeeld omdat je als Admin vooralsnog 'elevated privilege' nodig hebt? Je kunt docker ook installeren in je WSL-omgeving uit week 1. Hiervoor raden we aan om eens
+<code>docker</code>
+in te typen in je WSL en de instructies vanaf daar te volgen. </p>
 <h2 id="installatie-van-de-juice-shop-container">Installatie van de Juice Shop-container<a class="headerlink" href="#installatie-van-de-juice-shop-container" title="Permanent link">&para;</a></h2>
 <p>Download en draai nu de Juice Shop Docker-container met de volgende commando’s:
 <div class="highlight"><pre><span></span><code>docker pull bkimminich/juice-shop
@@ -978,7 +1009,8 @@ docker stop juiceshop
 <p>1. Met SQL-injectie is het mogelijk om via een invoerveld eigen SQL-statements door een webapplicatie uit te laten voeren. Denk aan <a href="https://xkcd.com/327/">het verwijderen van tabellen</a> of het omzeilen van de wachtwoord-check bij inloggen. Met dit laatste ga je aan de slag: probeer als administrator in te loggen zonder een wachtwoord op te geven!</p>
 <p>Toon je antwoord aan met een of meer screenshots waaruit duidelijk naar voren komt dat je succesvol bent ingelogd. Laat ook de invoer zien die deze illegale inlog mogelijk maakt. Beschrijf hierbij kort welke stappen je hebt uitgevoerd om tot je antwoord te komen.</p>
 <p>2. Er zit een groot probleem in de Juice Shop waardoor het mogelijk is om een bestelling te plaatsen met een negatief totaalbedrag. Hierdoor zou je in theorie geld toe moeten krijgen. Ga op zoek naar een manier om dit te veroorzaken. Tip: via ZAP zie je alle uitgaande requests. Zet eens een paar producten in je winkelmandje, pas wat aan en ga op zoek naar PUT- of POST-requests die je aan kunt passen. Om een bestelling te plaatsen zul je eerst moeten inloggen. Hiervoor kun je een account aanmaken, of je maakt gebruik van de resultaten van je hack-werk bij opgave 1...</p>
-<p>Toon je antwoord aan met de PDF van je bestelling waar een negatief te betalen bedrag op staat. Laat daarnaast je aangepaste request zien en beschrijf welke stappen je hebt uitgevoerd om tot je antwoord te komen.</p>
+<p>NB: het kan helpen om de Juice Shop te runnen in Firefox in plaats van Edge of Chrome. Bij die browsers werkt ZAP vaak beter. </p>
+<p>Toon je antwoord aan met de PDF van je bestelling waar een negatief te betalen bedrag op staat. Laat daarnaast je aangepaste request zien en beschrijf welke stappen je hebt uitgevoerd om tot je antwoord te komen. (40%)</p>
 <p>3. Ga zelf op zoek naar <strong>nog twee beveiligingslekken</strong> en toon ook deze weer aan door middel van screenshots en, indien van toepassing, aangepaste requests. Beschrijf daarnaast welke stappen je hebt uitgevoerd om tot je antwoord te komen.</p>
 <p>Enkele suggesties om te proberen:</p>
 <ul>
@@ -1039,7 +1071,7 @@ docker stop juiceshop
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/imgs.js"></script>
       

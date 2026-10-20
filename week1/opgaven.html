@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://hanze-hbo-ict.github.io/sw_sec_docs/week1/opgaven.html">
       
       
-        <link rel="prev" href="../index.html">
+        <link rel="prev" href="hydraWindows.html">
       
       
         <link rel="next" href="../week2/opgaven.html">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -249,6 +249,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="hydraWindows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hydra-instructies voor Windows-gebruikers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -322,39 +350,6 @@
   
     <nav class="md-nav" aria-label="Deel 1: Wachtwoorden kraken met Hydra">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hydra-installeren-1-voor-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hydra installeren (1 - voor Windows)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hydra-installeren-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hydra installeren (2)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hydra-draaien-op-een-webapp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hydra draaien op een webapp
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#de-opdracht" class="md-nav__link">
@@ -969,39 +964,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hydra-installeren-1-voor-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hydra installeren (1 - voor Windows)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hydra-installeren-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hydra installeren (2)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hydra-draaien-op-een-webapp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hydra draaien op een webapp
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#de-opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1087,55 +1049,54 @@
 <h1 id="opgaven-week-1-fuzzing">Opgaven week 1: fuzzing<a class="headerlink" href="#opgaven-week-1-fuzzing" title="Permanent link">&para;</a></h1>
 <h2 id="deel-1-wachtwoorden-kraken-met-hydra">Deel 1: Wachtwoorden kraken met Hydra<a class="headerlink" href="#deel-1-wachtwoorden-kraken-met-hydra" title="Permanent link">&para;</a></h2>
 <p>Deze opdracht kan op Linux, Mac en Windows (WSL) worden uitgevoerd.</p>
-<p><a href="https://github.com/vanhauser-thc/thc-hydra">Hydra</a> is een tool om wachtwoorden mee te brute-forcen, wat ook een vorm van fuzzing is.</p>
-<h3 id="hydra-installeren-1-voor-windows">Hydra installeren (1 - voor Windows)<a class="headerlink" href="#hydra-installeren-1-voor-windows" title="Permanent link">&para;</a></h3>
-<p>Windows-gebruikers moeten eerst het <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a> (WSL) installeren. De standaard-distributie, Ubuntu, is prima. Na installatie beschik je over een Linux-prompt en kun je onderstaande opdrachten uitvoeren (en nog veel meer - zo heb je WSL nodig om Docker, waar we volgende week mee bezig gaan, te kunnen draaien). <a href="https://overthewire.org/wargames/">Wargames van Over the Wire</a> is een web-app waar je interactief veel over het gebruiken van verschillende Linuxtools kunt leren. Een must voor ICT'ers. Advies is om te beginnen met de Bandit-wargame. Lees <a href="https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/">hier</a> hoe je bestanden van en naar je Linux-omgeving kunt kopiëren.</p>
-<h4 id="mogelijke-problemen-en-oplossingen-bij-wsl">Mogelijke problemen en oplossingen bij WSL<a class="headerlink" href="#mogelijke-problemen-en-oplossingen-bij-wsl" title="Permanent link">&para;</a></h4>
-<p>Heb je WSL al geïnstalleerd maar krijg je de melding "Windows Subsystem for Linux has no installed distributions"? Probeer het volgende commando te geven (op de commandline): <code>wsl --install -d ubuntu</code></p>
-<p>Mocht je tijdens het clonen van een Github-repository de foutmelding "Unable to resolve github.com in WSL" krijgen, dan de volgende stappen doorlopen om de default nameserver aan te passen:</p>
-<ul>
-<li><code>sudo nano /etc/wsl.conf</code></li>
-<li>voeg toe:
-<div class="highlight"><pre><span></span><code>[network]
-generateResolvConf = false
-</code></pre></div></li>
-<li><code>sudo nano /etc/resolv.conf</code></li>
-<li>comment originele nameserver uit (met #)</li>
-<li>voeg toe:
-<div class="highlight"><pre><span></span><code>nameserver 8.8.8.8
-nameserver 8.8.4.4
-</code></pre></div></li>
-<li>Opnieuw proberen, of bijv. eerst 'ping google.com'</li>
-</ul>
-<h3 id="hydra-installeren-2">Hydra installeren (2)<a class="headerlink" href="#hydra-installeren-2" title="Permanent link">&para;</a></h3>
-<p>We beginnen nu met de installatie van <a href="https://github.com/vanhauser-thc/thc-hydra">Hydra</a>. </p>
-<p>Allereerst willen we er zeker van zijn dat alle relevante packages goed geïnstalleerd en up-to-date zijn. De eerste stap is om de package-manager zelf te updaten.
+<p><a href="https://github.com/vanhauser-thc/thc-hydra">Hydra</a> is een tool om wachtwoorden mee te brute-forcen, wat ook een vorm van fuzzing is. </p>
+<details>
+<summary>### Hydra installeren</summary>
+
+#### Windows
+Windows-gebruikers: op [deze](https://hanze-hbo-ict.github.io/sw_sec_docs/week1/hydraWindows.html) pagina staan uitgebreide instructies voor het installeren en runnen van hydra en je (eigen) webapp.
+
+#### MacOS
+Mac-gebruikers kunnen hydra installeren via een [Brew-package](https://formulae.brew.sh/formula/hydra). 
+
+#### Linux
+Linux-gebruikers kunnen hydra installeren via apt. 
+
+Allereerst willen we er zeker van zijn dat alle relevante packages goed geïnstalleerd en up-to-date zijn. De eerste stap is om de package-manager zelf te updaten.
 <div class="highlight"><pre><span></span><code>sudo apt update
 sudo apt install libssl-dev libssh-dev libidn11-dev libpcre3-dev libgtk2.0-dev libmysqlclient-dev libpq-dev libsvn-dev
-</code></pre></div></p>
+</code></pre></div>
 <!-- Mochten git, gcc en/of make nog niet geïnstalleerd zijn, installeer deze dan eerst via je package manager (bijvoorbeeld Ubuntu Linux of WSL: ``sudo apt-get install git gcc make``). -->
 
-<p>De makkelijkste manier om Hydra te installeren is als package:
+De makkelijkste manier om Hydra te installeren is als package:
 <div class="highlight"><pre><span></span><code>sudo apt install hydra-gtk
-</code></pre></div></p>
-<h3 id="hydra-draaien-op-een-webapp">Hydra draaien op een webapp<a class="headerlink" href="#hydra-draaien-op-een-webapp" title="Permanent link">&para;</a></h3>
-<p>Onderstaande code is een voorbeeldcommando op het login-formulier van een lokale Flask-webapp, draaiend op poort 5000. Hydra probeert hier voor gebruiker (email) "<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#110;&#107;&#64;&#104;&#97;&#110;&#122;&#101;&#46;&#110;&#108;">&#104;&#101;&#110;&#107;&#64;&#104;&#97;&#110;&#122;&#101;&#46;&#110;&#108;</a>" alle wachtwoorden met 4 cijfers. Bestudeer de <a href="https://github.com/vanhauser-thc/thc-hydra">documentatie van Hydra</a> om te leren hoe de -x-optie en de andere parameters precies werken.</p>
-<p><code>hydra -l henk@hanze.nl -x 4:4:1 127.0.0.1 -s 5000 http-post-form "/login:email=^USER^&amp;password=^PASS^:Inlog mislukt."</code></p>
-<p>Let op: ondanks dat het misschien op meerdere regels wordt weergegeven, is bovenstaande één commmando dat op één regel dient te worden uitgevoerd! De volgorde die is weergegeven werkt onder Windows; Mac-gebruikers moeten mogelijk de volgorde van de argumenten aanpassen (de -s-parameter vóór het IP-adres).</p>
-<p>Om dit werkend te krijgen, zijn er enkele aandachtspunten:</p>
-<ul>
-<li>Zet de <a href="https://www.geeksforgeeks.org/csrf-protection-in-flask/">CSRF-controle</a> uit door <code>app.config['WTF_CSRF_ENABLED'] = False</code> in je code op te nemen, op de plek waar je ook de andere configuratie, zoals de <code>SECRET_KEY</code>, instelt.</li>
-<li>Zorg dat bij een incorrecte inlog de tekst "Inlog mislukt." (of iets anders - maar pas dan je Hydra-aanroep aan) in beeld komt, zodat Hydra weet wanneer een login-poging mislukt is.</li>
-<li>Windows-gebruikers moeten de webapp draaien vanuit hun WSL/Linux-console, dus <strong>niet</strong> vanuit de Windows-omgeving, anders kan Hydra er niet bij. Je gaat in je Linux-terminal naar de juiste map (bijv. <code>cd /mnt/c/Users/user/swsec/pract-wk1</code>) en start daar de applicatie (bijv. <code>python3 app.py</code>). Het is aan te raden om eerst een aparte virtual environment aan te maken en daarin de requirements voor je webapp te installeren. Dit werkt grotendeels hetzelfde als onder Windows, alleen de activatie van de venv gaat anders: <code>source my_venv/bin/activate</code>.</li>
-</ul>
+</code></pre></div>
+</details>
+
+<details>
+<summary>### Hydra draaien op een webapp</summary>
+Geen eigen webapp (meer) paraat? [Hier](https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1) kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren.
+In de README staat ook [een link naar een image op DockerHub](https://hub.docker.com/r/tomerikroos/webapp-hydra), nog gemakkelijker.
+Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.
+
+Onderstaande code is een voorbeeldcommando op het login-formulier van een lokale Flask-webapp, draaiend op poort 5000. Hydra probeert hier voor gebruiker (email) "henk@hanze.nl" alle wachtwoorden met 4 cijfers. Bestudeer de [documentatie van Hydra](https://github.com/vanhauser-thc/thc-hydra) om te leren hoe de -x-optie en de andere parameters precies werken.
+
+``hydra -l henk@hanze.nl -x 4:4:1 127.0.0.1 -s 5000 http-post-form "/login:email=^USER^&password=^PASS^:Inlog mislukt."``
+
+Let op: ondanks dat het misschien op meerdere regels wordt weergegeven, is bovenstaande één commmando dat op één regel dient te worden uitgevoerd! De volgorde die is weergegeven werkt onder Windows; Mac-gebruikers moeten mogelijk de volgorde van de argumenten aanpassen (de -s-parameter vóór het IP-adres).
+
+Om dit werkend te krijgen, zijn er enkele aandachtspunten:
+
+* Zet de [CSRF-controle](https://www.geeksforgeeks.org/csrf-protection-in-flask/) uit door ``app.config['WTF_CSRF_ENABLED'] = False`` in je code op te nemen, op de plek waar je ook de andere configuratie, zoals de ``SECRET_KEY``, instelt.
+* Zorg dat bij een incorrecte inlog de tekst "Inlog mislukt." (of iets anders - maar pas dan je Hydra-aanroep aan) in beeld komt, zodat Hydra weet wanneer een login-poging mislukt is.
+</details>
+
 <h3 id="de-opdracht">De opdracht<a class="headerlink" href="#de-opdracht" title="Permanent link">&para;</a></h3>
 <p>1. Je gaat een (misschien wel je eigen) Webtech- of IOT-applicatie<sup>*</sup> brute-forcen! Maak een gebruiker aan met een simpel wachtwoord, bijvoorbeeld bestaande uit 3 cijfers, en kijk hoelang Hydra erover doet om het te kraken. Maak nu het wachtwoord stapsgewijs complexer door meer cijfers en eventueel letters en leestekens (pas dan wel je -x-parameter aan) toe te voegen, en noteer steeds hoelang Hydra er ongeveer over doet. Als Hydra er te lang over gaat doen, kun je stoppen. Welke wachtwoord-complexiteit vind jij veilig genoeg? Schaalt dit naar een echte productie-applicatie of gelden er dan toch nog strengere eisen, en waarom?</p>
 <p>2. Een andere, vaak succesvollere, aanpak die hackers gebruiken, is een <em>dictionary attack</em>. Hierbij wordt een lijst met (gestolen) wachtwoorden gebruikt. Een bekende lijst is RockYou.txt, waarvan we <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1/rockyou">hier</a> het eerste gedeelte voor je klaar hebben gezet. Pas je Hydra-aanroep aan door het -x-gedeelte weg te halen en te vervangen door -P &lt;pad naar rockyou_first10000.txt&gt;. Maak weer een gebruiker aan, ditmaal met een wachtwoord uit de lijst. Kies eerst een willekeurig wachtwoord uit het begin, dan uit het midden en tot slot uit het einde van de lijst. Hoe lang duurt het kraken in deze drie gevallen?</p>
 <p>3. Benoem drie mogelijkheden om dit soort brute-force-aanvallen tegen te gaan.</p>
 <p>Lever een kort verslagje in over deze "penetration test" (pentest), inclusief screenshots van je Hydra-aanroeptijden, metingen, conclusies en drie tegenmaatregelen.</p>
-<p><sup>*</sup> Geen eigen webapp (meer) paraat? <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1">Hier</a> kun je er eentje vinden die je ook mag gebruiken.
-In de README staat ook <a href="https://hub.docker.com/r/tomerikroos/webapp-hydra">een link naar een image op DockerHub</a>, nog gemakkelijker.
-Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.</p>
+<p><sup>*</sup> Geen eigen webapp (meer) paraat? <a href="https://github.com/hanze-hbo-ict/sw_sec_docs/tree/master/src/pract-wk1">Hier</a> kun je er eentje vinden die je ook mag gebruiken. Let op: we raden aan om hiervoor een virtual environment aan te maken en daarin alle requirements uit requirements.txt te installeren. In de README staat ook <a href="https://hub.docker.com/r/tomerikroos/webapp-hydra">een link naar een image op DockerHub</a>, nog gemakkelijker. Vraag eventueel je werkcollegedocent om hulp om de app aan de praat te krijgen.</p>
 <h2 id="deel-2-fuzzing-met-radamsa">Deel 2: Fuzzing met Radamsa<a class="headerlink" href="#deel-2-fuzzing-met-radamsa" title="Permanent link">&para;</a></h2>
 <p>Radamsa is beschikbaar voor Linux, Apple en Windows (via WSL). De broncode is te vinden op <a href="https://gitlab.com/akihe/radamsa">Gitlab</a>. De <a href="https://gitlab.com/akihe/radamsa/-/blob/develop/README.md">documentatie</a> is daar ook te vinden.</p>
 <p>Download en installeer de software. De volgende commando’s kunnen hiervoor op Linux, Apple of WSL één voor één uitgevoerd worden via de terminal. Mochten git, gcc en/of make nog niet geïnstalleerd zijn, installeer deze dan eerst via je package manager (bijvoorbeeld Ubuntu Linux of WSL: <code>sudo apt install git gcc make</code>).</p>
@@ -1211,7 +1172,7 @@ Ga naar de map fuzz-cases en bekijk hier de gefuzzde bestanden.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/imgs.js"></script>
       
