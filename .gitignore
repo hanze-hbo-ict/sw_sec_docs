@@ -11,5 +11,6 @@ src/pract-wk3/__pycache__/test_data.cpython-38-pytest-6.2.3.pyc
 *.pyc
 .coverage
 swsecdocs_venv
-src/pract-wk1/myenv
-src/pract-wk3/vulnerable-webapp/myenv/
+venv/
+myenv/
+newenv/

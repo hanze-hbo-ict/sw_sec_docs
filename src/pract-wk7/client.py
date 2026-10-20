@@ -2,7 +2,7 @@ import asyncio, websockets
 from json import dumps, loads
 from time import sleep
 
-async def client_connect(username, password, variance=0.0):
+async def client_connect(username, password, variance=0.000002):
     """Handle sending and receiving logins to & from the server.
     'while True' structure prevents singular network/socket
     errors from causing full crash.
@@ -18,8 +18,7 @@ async def client_connect(username, password, variance=0.0):
         reply -- string of server's response to login attempt
     """
 
-    server_address = "ws://20.224.193.77:8080"   # Hanze server
-    #server_address = "ws://127.0.0.1:8080"      # local (Docker) server
+    server_address = "ws://127.0.0.1:8080"      # local (Docker) server
     
     while True:
         try:
@@ -32,7 +31,7 @@ async def client_connect(username, password, variance=0.0):
         except:
             continue
 
-def call_server(username, password, variance=0.0):
+def call_server(username, password, variance=0.000002):
     """Send a login attempt of username + password to the server
     and return the response. Optionally takes the variable variance to
     allow simulation of random network delays; the server will then
@@ -58,7 +57,7 @@ def call_server(username, password, variance=0.0):
     except KeyboardInterrupt:
         pass
 
-    sleep(0.001) # Wait so as to not overload the server with 90 students at once!
+    sleep(0.001) # Wait so as to not overload the server with many students at once!
     return (reply)
 
 # Test basic server connectivity & functionality
