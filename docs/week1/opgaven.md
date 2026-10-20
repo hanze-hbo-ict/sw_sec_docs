@@ -22,7 +22,7 @@ Allereerst willen we er zeker van zijn dat alle relevante packages goed geïnsta
 sudo apt update
 sudo apt install libssl-dev libssh-dev libidn11-dev libpcre3-dev libgtk2.0-dev libmysqlclient-dev libpq-dev libsvn-dev
 ```
-<!-- Mochten git, gcc en/of make nog niet geïnstalleerd zijn, installeer deze dan eerst via je package manager (bijvoorbeeld Ubuntu Linux of WSL: ``sudo apt-get install git gcc make``). -->
+Mochten git, gcc en/of make nog niet geïnstalleerd zijn, installeer deze dan eerst via je package manager (bijvoorbeeld Ubuntu Linux of WSL: ``sudo apt-get install git gcc make``).
 
 De makkelijkste manier om Hydra te installeren is als package:
 ```
@@ -43,7 +43,7 @@ Om dit werkend te krijgen, zijn er enkele aandachtspunten:
 
 * Zet de [CSRF-controle](https://www.geeksforgeeks.org/csrf-protection-in-flask/) uit door ``app.config['WTF_CSRF_ENABLED'] = False`` in je code op te nemen, op de plek waar je ook de andere configuratie, zoals de ``SECRET_KEY``, instelt.
 * Zorg dat bij een incorrecte inlog de tekst "Inlog mislukt." (of iets anders - maar pas dan je Hydra-aanroep aan) in beeld komt, zodat Hydra weet wanneer een login-poging mislukt is.
-</details>
+
 
 ### De opdracht
 
